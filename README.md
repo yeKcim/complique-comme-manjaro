@@ -1,6 +1,46 @@
-Mes notes post installation de Manjaro. C'est en vrac, c’est pas encore bien mis en forme mais c’est un premier jet :
+Mes notes post installation de Manjaro. C'est en vrac, ça n’engage que moi, c’est pas encore bien mis en forme mais c’est un premier jet :
 
 J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’utilitaire de mise à jour.
+
+# Paquets
+Puis j’installe quelques paquets :
+```
+pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape openscad owncloud-client playonlinux tilix \
+celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter \
+texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
+gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
+perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
+yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell \
+ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} \
+{awesome-terminal,powerline}-fonts fish python-nautilus steam-manjaro game-devices-udev \
+linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol
+```
+
+# AUR
+## Quelques paquets supplémentaires :
+* [cht.sh](http://cht.sh/) : `yay cht.sh`
+* [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
+* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
+* livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
+## Correcteur grammatical
+* `yay libreoffice-extension-grammalecte-fr`
+* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
+* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
+## Pour mes scripts
+`yay pdfposter`
+* manque **lptools libav-tools(ffmpeg) cups-client**
+## Polices
+* Pour avoir la police Sawasdee : `yay ttf-tlwg`
+* Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
+* Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
+## Audio
+Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
+
+# ssh
+* Configurer ssh : `sudo nano /etc/ssh/sshd_config`
+* Lancer ssh : `sudo systemctl start sshd.service`
+
+
 
 # Partition data séparée
 Comme j’ai ajouté le disque après l’installation je dois ajouter manuellement les informations dans fstab, le fichier permettant de configurer les partitions qui seront montées au démarrage. Pour savoir quoi écrire, il est nécessaire, dans un premier temps,de relever l’UUID du disque
@@ -15,39 +55,6 @@ UUID="3c10ccb9-e438-4c73-aebc-7d5456a4d5ef" /mnt/data/ ext4 defaults 0 2
 Par défaut, les dossiers Téléchargement, Bureau, Musique,… sont dans ~. Dans mon cas, il est nécessaire de les déplacer dans /mnt/data. Pour cela, il suffit de remplacer $HOME dans le fichier de configuration :
 `gedit $HOME/.config/user-dirs.dirs`
 Un chmod et chown récursifs sont ensuite nécessaires pour que le dossier soit accessible pour l’utilisateur.
-
-
-# Paquets
-Puis j’installe quelques paquets :
-```
-pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape openscad owncloud-client playonlinux tilix celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts fish python-nautilus steam-manjaro game-devices-udev linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol
-```
-
-# AUR
-## Cht.sh
-`yay cht.sh`
-## jdownloader2
-`yay jdownloader2`
-## Tixeo (vidéo conférence)
-`yay tixeo
-## livrets à partir de pdf
-**bookletimposer** (à supprimer !!!) ne semble pas fonctionner, trouver une alternative…
-## Correcteur grammatical
-* `yay libreoffice-extension-grammalecte-fr`
-* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
-* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
-## Pour mes scripts
-`yay pdfposter`
-## Polices
-Pour avoir la police Sawasdee : `yay ttf-tlwg`
-Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
-Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
-# Audio
-Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple que j’ai trouvée est `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
-
-# ssh
-* Configurer ssh : `sudo nano /etc/ssh/sshd_config`
-* Lancer ssh : `sudo systemctl start sshd.service`
 
 
 # Gestionaire de paramètres Manjaro
@@ -158,7 +165,7 @@ yay --editmenu -S torus-trooper
 Mais ne fonctionne toujours pas.
 -->
 Je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et **sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar**
-# mrboom
+## mrboom
 `yay mrboom`
 
 OpenSC2K ?
@@ -178,7 +185,6 @@ Je dois également modifier **/usr/share/applications/steam.desktop** pour suppr
  ==> yay -Yc
 * vi ?
  ==> https://github.com/michamos/vim-bepo
-* Pour mes scripts, il manque **lptools libav-tools(ffmpeg) cups-client**
 * Drivers (nvidia,…)
 * Impression
 * D’autres extensions inkscape ?
@@ -187,6 +193,6 @@ Je dois également modifier **/usr/share/applications/steam.desktop** pour suppr
 * dvd ?
 * cura/impression3D ? 
 * Émulateurs ?
-
+* https://forum.manjaro.org/c/announcements/stable-updates
 
 
