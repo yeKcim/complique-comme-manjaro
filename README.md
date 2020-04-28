@@ -144,41 +144,33 @@ ssh-copy permettra d’envoyer ma clé sur les pc du réseau, penser à la mettr
 
 
 # Nautilus
-Dans les préférences de Nautilus :
-* Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
-* Onglet __Comportement__, l'action d'ouverture sur Simple clic
-Pour intégrer meld : `yay nautilus-compare`
-Pour intégrer git : `yay rabbitvcs-nautilus`
-Mes scripts Nautilus : `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`
-J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
+* Dans les préférences de Nautilus :
+⋅⋅* Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
+⋅⋅* Onglet __Comportement__, l'action d'ouverture sur Simple clic
+* Pour intégrer meld : `yay nautilus-compare`
+* Pour intégrer git : `yay rabbitvcs-nautilus`
+* [Mes scripts Nautilus](https://github.com/yeKcim/my_nautilus_scripts) : `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts` (sur les machines qui n’ont pas ma clé : `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
+* J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
+
+
 # Impression 3d
 
-
 # Jeux
-`pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu`
-`yay shattered-pixel-dungeon`
-## torus-trooper
-J’ai tenté d’utiliser aur mais rien n’y fait…
-<!--
+* `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu`
+* [Shattered Pixel Dungeon](https://pixeldungeon.fandom.com/wiki/Mod-Shattered_Pixel_Dungeon) : `yay shattered-pixel-dungeon`
+* [torus-trooper](http://www.emhsoft.com/ttrooper/) (j’ai tenté d’utiliser aur mais rien n’y fait…) : <!--
 yay --editmenu -S gdc1-bin
  ==> ajouter au début du fichier une ligne **CHOST="x86_64-unknown-linux-gnu"**
 yay --editmenu -S torus-trooper 
  ==> remplacer l’adresse de torus…tar.gz par **http://deb.debian.org/debian/pool/main/t/torus-trooper/torus-trooper_0.22.dfsg1.orig.tar.gz**
   ==> remplacer le 2ème md5sum par **a88b2f2b0a6e4abccda657d83385f375**
 Mais ne fonctionne toujours pas.
--->
-Je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et **sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar**
-## mrboom
-`yay mrboom`
-
-OpenSC2K ?
-
-
+-->je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et `sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar`
+* [mrboom](http://mrboom.mumblecore.org/) : `yay mrboom` (reste à l’ajouter dans steam pour l’utiliser à la manette…)
+* OpenSC2K ? lincity ? ou autre ?
 ## Steam
-J’ajoute /mnt/data/SteamGames dans la liste des dossiers et le défini par défaut (steam > paramètres >  Téléchargements
-Je dois également modifier **/usr/share/applications/steam.desktop** pour supprimer %U afin d’avoir un raccourci Steam fonctionnel
-
-
+* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
+* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 
 
 
