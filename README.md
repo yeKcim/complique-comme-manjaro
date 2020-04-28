@@ -153,11 +153,15 @@ BACKSPACE="guess"
 # Imprimante
 
 ## Impression
-* `yay MFC-J4620DW` l’imprimante peut alors être installée (non?)
-* Dans l’[administration de cups](http://localhost:631/admin), j’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** mais il ne trouve pas le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
+* `yay MFC-J4620DW` l’imprimante pourra alors être installée :
+	* Dans l’[administration de cups](http://localhost:631/admin)
+	* J’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** en lui fournissant le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
 
 ## Scanner
-`yay brscan4` puis `sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5` le scanner sera alors utilisable via **simplescan**
+```yay brscan4
+sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5
+```
+le scanner sera alors utilisable via **simplescan**
 
 
 # Nautilus
@@ -175,7 +179,7 @@ BACKSPACE="guess"
 * [Shattered Pixel Dungeon](https://pixeldungeon.fandom.com/wiki/Mod-Shattered_Pixel_Dungeon) : `yay shattered-pixel-dungeon`
 * [torus-trooper](http://www.emhsoft.com/ttrooper/) (j’ai tenté d’utiliser aur mais rien n’y fait…) : je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et `sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar`
 * [mrboom](http://mrboom.mumblecore.org/) : `yay mrboom` (reste à l’ajouter dans steam pour l’utiliser à la manette…)
-* OpenSC2K ? lincity ? ou autre ?
+* OpenSC2K ? lincity ? openttd ? ou autre ? en tout cas il serait intéressant d’avoir une jeu de gestion
 ## Steam
 * J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
 * Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
