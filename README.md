@@ -136,7 +136,10 @@ ssh-copy permettra d’envoyer ma clé sur les pc du réseau, penser à la mettr
 
 
 # Imprimante
-`yay MFC-J4620DW` l’imprimante peut alors être installée (non?)
+## Impression
+* `yay MFC-J4620DW` l’imprimante peut alors être installée (non?)
+* Dans l’[administration de cups](http://localhost:631/admin), j’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** mais il ne trouve pas le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
+## Scanner
 `yay brscan4` puis `sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5`
 
 
