@@ -170,7 +170,9 @@ le scanner sera alors utilisable via **simplescan**
 	* Onglet __Comportement__, l'action d'ouverture sur Simple clic
 * Pour intégrer meld : `yay nautilus-compare`
 * Pour intégrer git : `yay rabbitvcs-nautilus`
-* [Mes scripts Nautilus](https://github.com/yeKcim/my_nautilus_scripts) : `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts` (sur les machines qui n’ont pas ma clé : `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
+* [Mes scripts Nautilus](https://github.com/yeKcim/my_nautilus_scripts) :
+	* Pour ma machine `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`
+	* Sur les machines qui n’ont pas ma clé `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
 * J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
 
 
