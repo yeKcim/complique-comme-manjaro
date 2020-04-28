@@ -158,6 +158,8 @@ BACKSPACE="guess"
 
 # Imprimante
 
+Pour mon imprimante Brother MFC-J4620DW :
+
 ## Impression
 * `yay MFC-J4620DW` l’imprimante pourra alors être installée :
 	* Dans l’[administration de cups](http://localhost:631/admin)
