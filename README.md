@@ -93,7 +93,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 * [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
 * [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
-* [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/)
+* [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/). Sur mon téléphone j’installe [KDE Connect](https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/)
 * [Impatience](https://extensions.gnome.org/extension/277/impatience/)
 * [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
 * [ShellTile ](https://extensions.gnome.org/extension/657/shelltile/)
