@@ -12,7 +12,7 @@ gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} \
-{awesome-terminal,powerline}-fonts fish python-nautilus steam-manjaro game-devices-udev \
+{awesome-terminal,powerline}-fonts fish python-nautilus steam-manjaro game-devices-udev arc-gtk-theme \
 linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol
 ```
 
@@ -70,16 +70,18 @@ Dans le **Gestionnaire de paramètres Manjaro** : je peux mettre à jour le **no
 # Personnalisations de Gnome
 
 ## Ajustements (Gnome-tweaks),
-* __Apparence__ je change le set d’icônes pour Adwaita, qui ne pose pas de problème dans Inkscape et me semble plus lisible, le thème d’applications Breezy-gtk et le thème shell Breezy-gtk
+* __Apparence__ je change
+	* le thème d’applications pour **Arc-Darker**
+	* le set d’icônes pour **Adwaita**, qui ne pose pas de problème dans Inkscape (entre autres) et me semble plus lisible
+	* le thème shell pour **Arc-Dark**
 * __Barre de titre des fenêtres__ Le clic milieu sur la barre de titre fait l’action Lower
-* __Extensions__ j’active Clipboard indicator, je le désactiverai s’il me pose encore des problèmes dans LibreOffice. J’active également Emoji selector, Impatience, Shelltile, Top panel workspace scroll et Workspace indicator
 * __Fenêtres__ je désactive les dialogues modaux
 * __Polices__ je modifie le Facteur de mise à l’échelle pour 0,8
 * __Applications au démarrage__ j’ajoute ici pavucontrol (mais comment ?)
 
 ## Paramètres
-Je configure mes **comptes en ligne** (Google, Nextcloud,…).
-Dans **Partage** j’active le **Partage de médias** pour activer le partage upnp
+* Je configure mes **comptes en ligne** (Google, Nextcloud,…).
+* Dans **Partage** j’active le **Partage de médias** pour activer le partage upnp
 
 ## Layouts
 Je choisi la disposition Modern et dans les paramètres je coche l’option **Desktop icons**.
@@ -104,7 +106,11 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 ## gedit
 Dans les préférences de Gedit :
-* Affichage : je coche **Afficher les numéros de ligne**, **Afficher la carte de la vue d’ensemble**, **surligner la ligne actuelle** et **Surligner les parenthèses correspondantes**.
+* Affichage : je coche 
+	* **Afficher les numéros de ligne**
+	* **Afficher la carte de la vue d’ensemble**
+	* **surligner la ligne actuelle**
+	* **Surligner les parenthèses correspondantes**
 * Police et couleurs : Je coche **Utiliser la police système à chasse fixe (Hack 11)** et choisi le jeu de couleur **Solarisé foncé** 
 
 ## Remettre les icônes dans les menus (gimp, inkscape,…)
@@ -147,7 +153,7 @@ BACKSPACE="guess"
 
 # Clé ssh
 * Génération de ma clé ssh : `ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519`
-* ssh-copy permettra d’envoyer ma clé sur les pc du réseau…
+* **ssh-copy** permettra d’envoyer ma clé sur les pc du réseau…
 
 
 # Imprimante
@@ -155,10 +161,11 @@ BACKSPACE="guess"
 ## Impression
 * `yay MFC-J4620DW` l’imprimante pourra alors être installée :
 	* Dans l’[administration de cups](http://localhost:631/admin)
-	* J’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** en lui fournissant le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
+	* J’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** en lui indiquant le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
 
 ## Scanner
-```yay brscan4
+```
+yay brscan4
 sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5
 ```
 le scanner sera alors utilisable via **simplescan**
