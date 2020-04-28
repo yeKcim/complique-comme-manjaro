@@ -1,4 +1,4 @@
-Mes notes post installation de Manjaro. C'est en vrac, ça n’engage que moi, c’est pas encore bien mis en forme mais c’est un premier jet :
+Mes notes post installation de Manjaro. C'est en vrac, ça n’engage que moi, c’est pas encore bien mis en forme mais c’est un premier jet :
 
 J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’utilitaire de mise à jour.
 
@@ -45,14 +45,14 @@ Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-ke
 # Partition data séparée
 Comme j’ai ajouté le disque après l’installation je dois ajouter manuellement les informations dans fstab, le fichier permettant de configurer les partitions qui seront montées au démarrage. Pour savoir quoi écrire, il est nécessaire, dans un premier temps,de relever l’UUID du disque
 `blkid`
-On pourra alors renseigner fstab :
+On pourra alors renseigner fstab :
 `nano /etc/fstab`
-En ajoutant une ligne ressemblant à :
+En ajoutant une ligne ressemblant à :
 **/dev/sdb: LABEL="newhome" UUID="3c10ccb9-e438-4c73-aebc-7d5456a4d5ef" TYPE="ext4"**
 ```
 UUID="3c10ccb9-e438-4c73-aebc-7d5456a4d5ef" /mnt/data/ ext4 defaults 0 2
 ```
-Par défaut, les dossiers Téléchargement, Bureau, Musique,… sont dans ~. Dans mon cas, il est nécessaire de les déplacer dans /mnt/data. Pour cela, il suffit de remplacer $HOME dans le fichier de configuration :
+Par défaut, les dossiers Téléchargement, Bureau, Musique,… sont dans ~. Dans mon cas, il est nécessaire de les déplacer dans /mnt/data. Pour cela, il suffit de remplacer $HOME dans le fichier de configuration :
 `gedit $HOME/.config/user-dirs.dirs`
 Un chmod et chown récursifs sont ensuite nécessaires pour que le dossier soit accessible pour l’utilisateur.
 
@@ -93,29 +93,28 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 # Personnalisations/Debug
 ## gedit
 Dans les préférences de Gedit :
-* Affichage : je coche **Afficher les numéros de ligne**, **Afficher la carte de la vue d’ensemble**, **surligner la ligne actuelle** et **Surligner les parenthèses correspondantes.
+* Affichage : je coche **Afficher les numéros de ligne**, **Afficher la carte de la vue d’ensemble**, **surligner la ligne actuelle** et **Surligner les parenthèses correspondantes**.
 * Police et couleurs : Je coche **Utiliser la police système à chasse fixe (Hack 11)** et choisi le jeu de couleur **Solarisé foncé** 
 ## Remettre les icônes dans les menus (gimp, inkscape,…)
 [Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199)
-C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"`
+C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"`
 ## Problème des ligatures grasses disgracieuses
 `printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
 ## Extensions Inkscape
-`yay textext` (j'installe libxml2 et python2-lxml pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
+`yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
 
 
 # fish
 Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps…
 `chsh -s /usr/bin/fish $USERNAME`
-Trouver l’équivalent à
-!!
-!$
-raccourci grep G !
-activer pgup/pgdown
-ctrl+r 
+* Trouver l’équivalent à : 
+** !!
+** !$
+** raccourci |grep : G
+** activer pgup/pgdown
 
 # Bépo
-Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
+Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
 Reste le problème de gdm !
 Dans Ajustements → Clavier et souris : J'active **Compose** (Super droit)
 Pour que bépo soit pris en compte dans tty :
@@ -131,8 +130,8 @@ BACKSPACE="guess"
 
 
 # Clé ssh
-Génération de ma clé ssh : `ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519`
-ssh-copy permettra d’envoyer ma clé sur les pc du réseau, penser à la mettre sur github également…
+* Génération de ma clé ssh : `ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519`
+* ssh-copy permettra d’envoyer ma clé sur les pc du réseau…
 
 
 # Imprimante
@@ -145,8 +144,8 @@ ssh-copy permettra d’envoyer ma clé sur les pc du réseau, penser à la mettr
 
 # Nautilus
 * Dans les préférences de Nautilus :
-⋅⋅* Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
-⋅⋅* Onglet __Comportement__, l'action d'ouverture sur Simple clic
+** Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
+** Onglet __Comportement__, l'action d'ouverture sur Simple clic
 * Pour intégrer meld : `yay nautilus-compare`
 * Pour intégrer git : `yay rabbitvcs-nautilus`
 * [Mes scripts Nautilus](https://github.com/yeKcim/my_nautilus_scripts) : `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts` (sur les machines qui n’ont pas ma clé : `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
@@ -189,5 +188,5 @@ Mais ne fonctionne toujours pas.
 * cura/impression3D ? 
 * Émulateurs ?
 * https://forum.manjaro.org/c/announcements/stable-updates
-
+* éditeur markdown : `yay ghostwriter` (à l’essai)
 
