@@ -108,10 +108,10 @@ C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (so
 Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps…
 `chsh -s /usr/bin/fish $USERNAME`
 * Trouver l’équivalent à : 
-** !!
-** !$
-** raccourci |grep : G
-** activer pgup/pgdown
+	* !!
+	* !$
+	* raccourci |grep : G
+	* activer pgup/pgdown
 
 # Bépo
 Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
@@ -144,8 +144,8 @@ BACKSPACE="guess"
 
 # Nautilus
 * Dans les préférences de Nautilus :
-** Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
-** Onglet __Comportement__, l'action d'ouverture sur Simple clic
+	* Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
+	* Onglet __Comportement__, l'action d'ouverture sur Simple clic
 * Pour intégrer meld : `yay nautilus-compare`
 * Pour intégrer git : `yay rabbitvcs-nautilus`
 * [Mes scripts Nautilus](https://github.com/yeKcim/my_nautilus_scripts) : `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts` (sur les machines qui n’ont pas ma clé : `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
