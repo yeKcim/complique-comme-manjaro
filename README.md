@@ -10,7 +10,7 @@ celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverte
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
-yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell \
+yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell gedit-plugins \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} \
 {awesome-terminal,powerline}-fonts fish python-nautilus steam-manjaro game-devices-udev arc-gtk-theme \
 linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol
