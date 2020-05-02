@@ -30,6 +30,7 @@ linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials}
 * Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
 * upgrade : `sudo pacman -Syu`
 * nettoyer le cache : `sudo pacman -Scc`
+* chercher un paquet `pacman -Ss nomdepaquet`
 ## Yay
 * informations de maj : `yay -Pu`
 * upgrade : `yay -Syu`
@@ -47,7 +48,6 @@ linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials}
 ## Quelques paquets supplémentaires :
 * [cht.sh](http://cht.sh/) : `yay cht.sh`
 * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
-* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
 * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 
 ## Correcteur grammatical
@@ -68,7 +68,10 @@ linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials}
 Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 
 ## Boulot
-`yay scidavis`
+* `yay scidavis`
+* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
+* `yay freecad`
+
 
 <!--
 ███████╗███████╗██╗  ██╗
