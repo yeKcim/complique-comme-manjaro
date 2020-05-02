@@ -40,6 +40,16 @@ linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials}
 ## Audio
 Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 
+
+<!--
+███████╗███████╗██╗  ██╗
+██╔════╝██╔════╝██║  ██║
+███████╗███████╗███████║
+╚════██║╚════██║██╔══██║
+███████║███████║██║  ██║
+╚══════╝╚══════╝╚═╝  ╚═╝
+-->
+
 # ssh
 * Configurer ssh : `sudo nano /etc/ssh/sshd_config`
 * Lancer ssh : `sudo systemctl start sshd.service`
@@ -157,14 +167,11 @@ BACKSPACE="guess"
 
 
 # Imprimante
-
 Pour mon imprimante Brother MFC-J4620DW :
-
 ## Impression
 * `yay MFC-J4620DW` l’imprimante pourra alors être installée :
 	* Dans l’[administration de cups](http://localhost:631/admin)
 	* J’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** en lui indiquant le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
-
 ## Scanner
 ```
 yay brscan4
@@ -203,11 +210,20 @@ le scanner sera alors utilisable via **simplescan**
 * vi ?
  ==> https://github.com/michamos/vim-bepo
 * Drivers (nvidia,…)
+ + GameStream (moonlight sur android) ?
 * D’autres extensions inkscape ?
 * parefeu ?
 * xorg-xkill ?
 * dvd ?
 * cura/impression3D ? 
 * Émulateurs ?
-* https://forum.manjaro.org/c/announcements/stable-updates
+
+
+# Mettre à jour
+* Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
+* upgrade : `sudo pacman -Syu`
+* nettoyer le cache : `sudo pacman -Scc`
+* informations de maj yay : `yay -Pu`
+* yay upgrade : `yay -Syu`
+
 
