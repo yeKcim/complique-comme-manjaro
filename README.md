@@ -121,8 +121,8 @@ Un chmod et chown récursifs sont ensuite nécessaires pour que le dossier soit 
 -->
 # Gestionaire de paramètres Manjaro
 Dans le **Gestionnaire de paramètres Manjaro** : je peux
-* mettre à jour le **noyau**
-* installer les **paquets linguistiques**
+* mettre à jour le noyau
+* installer les paquets linguistiques**
 * installer les pilotes de ma carte graphique
 ce que je fais.
 
@@ -221,7 +221,7 @@ Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps�
 	* activer pgup/pgdown
 
 
-<!--
+<!--      ███╗
 ██████╗ ███████╗██████╗  ██████╗ 
 ██╔══██╗██╔════╝██╔══██╗██╔═══██╗
 ██████╔╝█████╗  ██████╔╝██║   ██║
@@ -233,6 +233,7 @@ Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps�
 * Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
 * Reste le problème de gdm !
 * Dans **Ajustements → Clavier et souris** : J'active **Compose** (Super droit)
+
 * Pour que bépo soit pris en compte dans tty :
 `nano /etc/default/keyboard`
 ```
@@ -243,6 +244,9 @@ XKBOPTIONS="lv3:ralt_switch"
 
 BACKSPACE="guess" 
 ```
+(tty est toujours en azerty…)
+
+`sudo nano /etc/vconsole.conf` : mettre la valeur fr-bepo dans la variable KEYMAP [source](https://wiki.archlinux.fr/dvorak)
 
 
 <!--
@@ -318,4 +322,4 @@ le scanner sera alors utilisable via **simplescan**
 * dvd ?
 * cura/impression3D ? 
 * Émulateurs ?
-
+* bta-3100
