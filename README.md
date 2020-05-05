@@ -28,13 +28,16 @@ linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials}
 # Memo gestion des paquets
 ## Pacman
 * Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
+* update : `sudo pacman -Sy`
 * upgrade : `sudo pacman -Syu`
 * nettoyer le cache : `sudo pacman -Scc`
 * chercher un paquet `pacman -Ss nomdepaquet`
 ## Yay
-* informations de maj : `yay -Pu`
-* upgrade : `yay -Syu`
+* informations de maj : `yay -Pua`
+* upgrade : `yay -Sua`
 * supprimer les dépendances non nécessaires : `yay -Yc`
+* quelques stats : `yay -Ps`
+
 
 <!--
  █████╗ ██╗   ██╗██████╗ 
@@ -55,10 +58,6 @@ linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials}
 * [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
 * [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
 
-## Pour mes scripts
-`yay pdfposter`
-* manque **lptools libav-tools(ffmpeg) cups-client**
-
 ## Polices
 * Pour avoir la police Sawasdee : `yay ttf-tlwg`
 * Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
@@ -72,6 +71,9 @@ Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-ke
 * [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
 * `yay freecad`
 
+## Essais
+* `yay openpose`
+
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -82,8 +84,10 @@ Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-ke
 ╚══════╝╚══════╝╚═╝  ╚═╝
 -->
 # ssh
+[source](https://wiki.archlinux.fr/ssh)
 * Configurer ssh : `sudo nano /etc/ssh/sshd_config`
 * Lancer ssh : `sudo systemctl start sshd.service`
+* Lancer au démarrage : `sudo systemctl enable sshd.service`
 * Génération de ma clé ssh : `ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519`
 * **ssh-copy** permettra d’envoyer ma clé sur les pc du réseau…
 
@@ -231,9 +235,7 @@ Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps�
 -->
 # Bépo
 * Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
-* Reste le problème de gdm !
 * Dans **Ajustements → Clavier et souris** : J'active **Compose** (Super droit)
-
 * Pour que bépo soit pris en compte dans tty :
 `nano /etc/default/keyboard`
 ```
@@ -244,9 +246,8 @@ XKBOPTIONS="lv3:ralt_switch"
 
 BACKSPACE="guess" 
 ```
-(tty est toujours en azerty…)
-
-`sudo nano /etc/vconsole.conf` : mettre la valeur fr-bepo dans la variable KEYMAP [source](https://wiki.archlinux.fr/dvorak)
+ne semble pas suffire mais mettre la valeur fr-bepo dans la variable KEYMAP `sudo nano /etc/vconsole.conf` résout le problème [source](https://wiki.archlinux.fr/dvorak)
+* Comment faire pour que GDM soit en bépo par défaut ?
 
 
 <!--
@@ -288,6 +289,8 @@ le scanner sera alors utilisable via **simplescan**
 * [Mes scripts Nautilus](https://github.com/yeKcim/my_nautilus_scripts) :
 	* Pour ma machine `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`
 	* Sur les machines qui n’ont pas ma clé `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
+	* `yay pdfposter`
+	* manque **lptools libav-tools(ffmpeg) cups-client**
 * J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
 
 
@@ -316,10 +319,12 @@ le scanner sera alors utilisable via **simplescan**
 # Reste à voir :
 * aur dans pacman ?
 * vi ?
- ==> https://github.com/michamos/vim-bepo
+	* https://github.com/michamos/vim-bepo
 * parefeu ?
 * xorg-xkill ?
 * dvd ?
 * cura/impression3D ? 
 * Émulateurs ?
 * bta-3100
+* [rezonator2](https://github.com/orion-project/rezonator2)
+* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster)
