@@ -15,7 +15,7 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 Puis j’installe quelques paquets :
 ```
 pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape openscad owncloud-client playonlinux tilix \
-celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter \
+celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter grc \
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
@@ -215,15 +215,27 @@ C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (so
 ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝      ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 -->
 # fish
-Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps…
+Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps… Je défini donc ce shell par défaut :
 `chsh -s /usr/bin/fish $USERNAME`
-* Trouver l’équivalent à : 
+
+Problème, ne sont pas supportés par fish :  
 	* !!
 	* !$
+	* = il faut utiliser set variable
+	* ${variable}
+Me manque également :
 	* raccourci |grep : G
-	* activer pgup/pgdown
-	* dans fish = n’est pas supporté, il faut utiliser set variable
-	* dans fish on ne peut pas utiliser ${variable}
+	* pgup/pgdown ?
+
+[source](https://www.ostechnix.com/oh-fish-make-shell-beautiful/)
+* J’installe Oh My fish : `curl -L https://get.oh-my.fish | fish`
+* Je prévisualise [les thèmes disponibles](https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md) et choisis agnoster : `omf install agnoster`
+* Les plugins qui m’intéressent : `omf install archlinux bang-bang colored-man-pages plugin-grc thefuck`
+
+taskwarrior/timewarrior
+tmux ?
+
+
 
 
 <!--      ███╗
