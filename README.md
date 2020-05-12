@@ -37,6 +37,7 @@ linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials}
 * upgrade : `yay -Sua`
 * supprimer les dépendances non nécessaires : `yay -Yc`
 * quelques stats : `yay -Ps`
+* remove : `yay -R nomdepaquet`
 
 
 <!--
@@ -71,8 +72,6 @@ Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-ke
 * [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
 * `yay freecad`
 
-## Essais
-* `yay openpose`
 
 
 <!--
@@ -223,6 +222,8 @@ Je souhaite tenter quelques temps fish au lieu de zsh, au moins quelques temps�
 	* !$
 	* raccourci |grep : G
 	* activer pgup/pgdown
+	* dans fish = n’est pas supporté, il faut utiliser set variable
+	* dans fish on ne peut pas utiliser ${variable}
 
 
 <!--      ███╗
@@ -304,7 +305,7 @@ le scanner sera alors utilisable via **simplescan**
  ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 -->
 # Jeux
-* `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu`
+* `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu vitetris`
 * [Shattered Pixel Dungeon](https://pixeldungeon.fandom.com/wiki/Mod-Shattered_Pixel_Dungeon) : `yay shattered-pixel-dungeon`
 * [torus-trooper](http://www.emhsoft.com/ttrooper/) (j’ai tenté d’utiliser aur mais rien n’y fait…) : je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et `sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar`
 * [mrboom](http://mrboom.mumblecore.org/) : `yay mrboom` (reste à l’ajouter dans steam pour l’utiliser à la manette…)
@@ -327,4 +328,14 @@ le scanner sera alors utilisable via **simplescan**
 * Émulateurs ?
 * bta-3100
 * [rezonator2](https://github.com/orion-project/rezonator2)
-* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster)
+* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
+* Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
+* `yay gnuplot` montre pleins de logiciels qui donnent envie, à tester :
+	* cueplot ?
+	* [eplot](https://github.com/chriswolfvision/eplot) et [gnuplotme](gnuplotme) semblent juste ajouter une couche de plus
+* il y a d’autres softs sympas dans mes articles LP, à voir.
+* dictionnaire ? traduction ? ascii ?
+# À tester ?
+* `yay openpose`
+* gitqlient
+* tmux
