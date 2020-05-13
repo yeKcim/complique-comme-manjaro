@@ -316,9 +316,14 @@ le scanner sera alors utilisable via **simplescan**
 	* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
 	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/vitetris.png">
+</p>
+
 
 
 <!--
+  ███╗
 ███████╗██████╗ ██╗████████╗███████╗██╗   ██╗██████╗ ███████╗    ██████╗ ███████╗    ████████╗███████╗██╗  ██╗████████╗███████╗
 ██╔════╝██╔══██╗██║╚══██╔══╝██╔════╝██║   ██║██╔══██╗██╔════╝    ██╔══██╗██╔════╝    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝
 █████╗  ██║  ██║██║   ██║   █████╗  ██║   ██║██████╔╝███████╗    ██║  ██║█████╗         ██║   █████╗   ╚███╔╝    ██║   █████╗  
@@ -326,7 +331,11 @@ le scanner sera alors utilisable via **simplescan**
 ███████╗██████╔╝██║   ██║   ███████╗╚██████╔╝██║  ██║███████║    ██████╔╝███████╗       ██║   ███████╗██╔╝ ██╗   ██║   ███████╗
 ╚══════╝╚═════╝ ╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
 -->
-# nano
+# Éditeurs de texte
+
+J’utilise régulièrement gedit et nano lorsque je suis en console. J’essaye de passer à vi. J’ai donc 3 éditeurs de texte à configurer.
+
+## nano
 Mes fichiers de configuration de nano permettent d’ajouter la coloration syntaxique et d’avoir une interface rouge pour root et bleu pour l’utilisateur
 ```
 mkdir $HOME/.config/nano/
@@ -339,7 +348,7 @@ sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/maste
 </p>
 
 
-# gedit
+## gedit
 Dans les préférences de Gedit :
 * Affichage : je coche 
 	* **Afficher les numéros de ligne**
@@ -347,6 +356,12 @@ Dans les préférences de Gedit :
 	* **surligner la ligne actuelle**
 	* **Surligner les parenthèses correspondantes**
 * Police et couleurs : Je coche **Utiliser la police système à chasse fixe (Hack 11)** et choisi le jeu de couleur **Solarisé foncé** 
+
+## vi
+
+`pacman -S vim-grammalecte vim-spell-fr powerline` ?????????
+
+
 
 
 
