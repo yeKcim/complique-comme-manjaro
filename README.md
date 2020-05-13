@@ -219,6 +219,10 @@ sudo ln -s $HOME/.zshrc /root/.zshrc
 ```
 j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dans ~/.zshrc pour éviter le message d’erreur « Insecure completion-dependent directories detected »
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh.png">
+</p>
+
 
 
 <!--      ███╗
@@ -331,7 +335,7 @@ sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/maste
 ```
 
 <p align="center">
-  <img src="nano.png">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano.png">
 </p>
 
 
