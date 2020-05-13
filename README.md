@@ -211,12 +211,11 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 ```
 
-## Pour root… (il faudra faire mieux)
+## Pour root… (il faudra trouver mieux)
 Comme mon poste est mono-utilisateur je me permettre [un truc crade](https://askubuntu.com/questions/521469/oh-my-zsh-for-the-root-and-for-all-user) pour avoir ohmyzsh après un `sudo -s` :
 ```
 sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
 sudo ln -s $HOME/.zshrc /root/.zshrc
-
 ```
 j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dans ~/.zshrc pour éviter le message d’erreur « Insecure completion-dependent directories detected »
 
@@ -289,6 +288,8 @@ le scanner sera alors utilisable via **simplescan**
 	* `yay pdfposter`
 	* manque **lptools libav-tools(ffmpeg) cups-client**
 * J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
+
+![Mes nautilus scripts](https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/screenshot2.png)
 
 
 
