@@ -1,6 +1,11 @@
 ZSH_THEME="agnoster"
 DEFAULT_USER="yekcim"
 
+##### Sources ######
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 ###### Highlighters ######
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(regexp main brackets pattern) # l’ordre à un sens, regexp avant main pour prioriser les guillemets
 # dangerous command
@@ -11,11 +16,6 @@ ZSH_HIGHLIGHT_REGEXP+=('\ \+[^ ]+' 'fg=227') # yellow tags (+txt)
 ZSH_HIGHLIGHT_REGEXP+=('[^ ]+\:' 'fg=140')   # purple attributes (txt:)
 ZSH_HIGHLIGHT_REGEXP+=('\ \-[^ ]+' 'fg=227') # yellow del tag (-xt), also useful to color args in all command
 ZSH_HIGHLIGHT_REGEXP+=('\ \_[^ ]+' 'fg=32')  # blue (_txt)
-
-##### Sources ######
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ###### ↑↓ pgup pgdn undo ######
 bindkey '^[[5~' history-beginning-search-backward               # Page up key
