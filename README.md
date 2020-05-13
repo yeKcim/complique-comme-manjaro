@@ -27,18 +27,18 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 ```
 
 # Memo gestion des paquets
-## Pacman
-* Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
-* update : `sudo pacman -Sy`
-* upgrade : `sudo pacman -Syu`
-* nettoyer le cache : `sudo pacman -Scc`
-* chercher un paquet `pacman -Ss nomdepaquet`
-## Yay
-* informations de maj : `yay -Pua`
-* upgrade : `yay -Sua`
-* supprimer les dépendances non nécessaires : `yay -Yc`
-* quelques stats : `yay -Ps`
-* remove : `yay -R nomdepaquet`
+* Pacman
+	* Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
+	* update : `sudo pacman -Sy`
+	* upgrade : `sudo pacman -Syu`
+	* nettoyer le cache : `sudo pacman -Scc`
+	* chercher un paquet `pacman -Ss nomdepaquet`
+* Yay
+	* informations de maj : `yay -Pua`
+	* upgrade : `yay -Sua`
+	* supprimer les dépendances non nécessaires : `yay -Yc`
+	* quelques stats : `yay -Ps`
+	* remove : `yay -R nomdepaquet`
 
 
 <!--
@@ -50,28 +50,23 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝
 -->
 # AUR
-## Quelques paquets supplémentaires :
-* [cht.sh](http://cht.sh/) : `yay cht.sh`
-* [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
-* livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
-
-## Correcteur grammatical
-* `yay libreoffice-extension-grammalecte-fr`
-* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
-* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
-
-## Polices
-* Pour avoir la police Sawasdee : `yay ttf-tlwg`
-* Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
-* Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
-
-## Audio
-Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
-
-## Boulot
-* `yay scidavis`
-* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
-* `yay freecad`
+* Quelques paquets supplémentaires :
+	* [cht.sh](http://cht.sh/) : `yay cht.sh`
+	* [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
+	* livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
+* Correcteur grammatical
+	* `yay libreoffice-extension-grammalecte-fr`
+	* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
+	* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
+* Polices
+	* Pour avoir la police Sawasdee : `yay ttf-tlwg`
+	* Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
+	* Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
+* Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
+* Quelques outils utiles pour le boulot :
+	* `yay scidavis`
+	* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
+	* `yay freecad`
 
 
 
@@ -186,24 +181,9 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 -->
 # Personnalisations/Debug
 
-## gedit
-Dans les préférences de Gedit :
-* Affichage : je coche 
-	* **Afficher les numéros de ligne**
-	* **Afficher la carte de la vue d’ensemble**
-	* **surligner la ligne actuelle**
-	* **Surligner les parenthèses correspondantes**
-* Police et couleurs : Je coche **Utiliser la police système à chasse fixe (Hack 11)** et choisi le jeu de couleur **Solarisé foncé** 
-
-## Remettre les icônes dans les menus (gimp, inkscape,…)
-[Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199)
-C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"`
-
-## Problème des ligatures grasses disgracieuses
-`printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
-
-## Extensions Inkscape
-`yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
+* Remettre les icônes dans les menus (gimp, inkscape,…) : C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) il suffit de taper : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"` ([Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199))
+* Problème des ligatures grasses disgracieuses : `printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
+* Extensions Inkscape : `yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
 
 
 
@@ -326,19 +306,19 @@ le scanner sera alors utilisable via **simplescan**
 * [torus-trooper](http://www.emhsoft.com/ttrooper/) (j’ai tenté d’utiliser aur mais rien n’y fait…) : je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et `sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar`
 * [mrboom](http://mrboom.mumblecore.org/) : `yay mrboom` (reste à l’ajouter dans steam pour l’utiliser à la manette…)
 * OpenSC2K ? lincity ? openttd ? ou autre ? en tout cas il serait intéressant d’avoir une jeu de gestion
-## Steam
-* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
-* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
+* Steam
+	* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
+	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 
 
 
 <!--
-███╗   ██╗ █████╗ ███╗   ██╗ ██████╗ 
-████╗  ██║██╔══██╗████╗  ██║██╔═══██╗
-██╔██╗ ██║███████║██╔██╗ ██║██║   ██║
-██║╚██╗██║██╔══██║██║╚██╗██║██║   ██║
-██║ ╚████║██║  ██║██║ ╚████║╚██████╔╝
-╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+███████╗██████╗ ██╗████████╗███████╗██╗   ██╗██████╗ ███████╗    ██████╗ ███████╗    ████████╗███████╗██╗  ██╗████████╗███████╗
+██╔════╝██╔══██╗██║╚══██╔══╝██╔════╝██║   ██║██╔══██╗██╔════╝    ██╔══██╗██╔════╝    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝
+█████╗  ██║  ██║██║   ██║   █████╗  ██║   ██║██████╔╝███████╗    ██║  ██║█████╗         ██║   █████╗   ╚███╔╝    ██║   █████╗  
+██╔══╝  ██║  ██║██║   ██║   ██╔══╝  ██║   ██║██╔══██╗╚════██║    ██║  ██║██╔══╝         ██║   ██╔══╝   ██╔██╗    ██║   ██╔══╝  
+███████╗██████╔╝██║   ██║   ███████╗╚██████╔╝██║  ██║███████║    ██████╔╝███████╗       ██║   ███████╗██╔╝ ██╗   ██║   ███████╗
+╚══════╝╚═════╝ ╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
 -->
 # nano
 Mes fichiers de configuration de nano permettent d’ajouter la coloration syntaxique et d’avoir une interface rouge pour root et bleu pour l’utilisateur
@@ -347,6 +327,14 @@ mkdir $HOME/.config/nano/
 curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/nanorc -o $HOME/.config/nano/nanorc
 sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/root.nanorc -o /root/.nanorc
 ```
+# gedit
+Dans les préférences de Gedit :
+* Affichage : je coche 
+	* **Afficher les numéros de ligne**
+	* **Afficher la carte de la vue d’ensemble**
+	* **surligner la ligne actuelle**
+	* **Surligner les parenthèses correspondantes**
+* Police et couleurs : Je coche **Utiliser la police système à chasse fixe (Hack 11)** et choisi le jeu de couleur **Solarisé foncé** 
 
 
 
