@@ -12,9 +12,8 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 ╚═╝     ╚═╝  ╚═╝ ╚══▀▀═╝  ╚═════╝ ╚══════╝   ╚═╝   ╚══════╝
 -->
 # Paquets
-Puis j’installe quelques paquets :
 ```
-pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape openscad owncloud-client playonlinux tilix \
+sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape openscad owncloud-client playonlinux tilix \
 celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting \
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
@@ -196,6 +195,11 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 ╚══════╝╚══════╝╚═╝  ╚═╝
 -->
 # zsh
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh.png">
+</p>
+
 * Installation de Oh-My-ZSH : `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
 ## Personnalisation
@@ -218,11 +222,6 @@ sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
 sudo ln -s $HOME/.zshrc /root/.zshrc
 ```
 j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dans ~/.zshrc pour éviter le message d’erreur « Insecure completion-dependent directories detected »
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh.png">
-</p>
-
 
 
 <!--      ███╗
@@ -281,6 +280,11 @@ le scanner sera alors utilisable via **simplescan**
 ╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝╚══════╝ ╚═════╝ ╚══════╝
 -->
 # Nautilus
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/screenshot2.png">
+</p>
+
 * Dans les préférences de Nautilus :
 	* Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
 	* Onglet __Comportement__, l'action d'ouverture sur Simple clic
@@ -293,9 +297,6 @@ le scanner sera alors utilisable via **simplescan**
 	* manque **lptools libav-tools(ffmpeg) cups-client**
 * J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/screenshot2.png">
-</p>
 
 
 <!--
@@ -307,6 +308,11 @@ le scanner sera alors utilisable via **simplescan**
  ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 -->
 # Jeux
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/vitetris.png">
+</p>
+
 * `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu vitetris`
 * [Shattered Pixel Dungeon](https://pixeldungeon.fandom.com/wiki/Mod-Shattered_Pixel_Dungeon) : `yay shattered-pixel-dungeon`
 * [torus-trooper](http://www.emhsoft.com/ttrooper/) (j’ai tenté d’utiliser aur mais rien n’y fait…) : je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et `sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar`
@@ -315,11 +321,6 @@ le scanner sera alors utilisable via **simplescan**
 * Steam
 	* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
 	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/vitetris.png">
-</p>
-
 
 
 <!--
@@ -336,16 +337,17 @@ le scanner sera alors utilisable via **simplescan**
 J’utilise régulièrement gedit et nano lorsque je suis en console. J’essaye de passer à vi. J’ai donc 3 éditeurs de texte à configurer.
 
 ## nano
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano.png">
+</p>
+
 Mes fichiers de configuration de nano permettent d’ajouter la coloration syntaxique et d’avoir une interface rouge pour root et bleu pour l’utilisateur
 ```
 mkdir $HOME/.config/nano/
 curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/nanorc -o $HOME/.config/nano/nanorc
 sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/root.nanorc -o /root/.nanorc
 ```
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano.png">
-</p>
 
 
 ## gedit
