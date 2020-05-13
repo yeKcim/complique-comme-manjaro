@@ -233,6 +233,11 @@ j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dan
 ╚═════╝ ╚══════╝╚═╝      ╚═════╝ 
 -->
 # Bépo
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/bepo.jpg">
+</p>
+
 * Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
 * Dans **Ajustements → Clavier et souris** : J'active **Compose** (Super droit)
 * Pour que bépo soit pris en compte dans tty :
