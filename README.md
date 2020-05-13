@@ -289,8 +289,9 @@ le scanner sera alors utilisable via **simplescan**
 	* manque **lptools libav-tools(ffmpeg) cups-client**
 * J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
 
-![Mes nautilus scripts](https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/screenshot2.png)
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/screenshot2.png">
+</p>
 
 
 <!--
