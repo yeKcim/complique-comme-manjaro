@@ -315,7 +315,7 @@ le scanner sera alors utilisable via **simplescan**
 # Jeux
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/my_nautilus_scripts/master/vitetris.png">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vitetris.png">
 </p>
 
 * `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu vitetris`
