@@ -15,7 +15,7 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 Puis j’installe quelques paquets :
 ```
 pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape openscad owncloud-client playonlinux tilix \
-celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter \
+celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting \
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
@@ -295,9 +295,14 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 ```
+# Pour root… (il faudra faire mieux)
+Comme mon poste est mono-utilisateur je me permettre [un truc crade](https://askubuntu.com/questions/521469/oh-my-zsh-for-the-root-and-for-all-user) pour avoir ohmyzsh après un `sudo -s` :
+```
+sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
+sudo ln -s $HOME/.zshrc /root/.zshrc
 
-
-
+```
+j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dans ~/.zshrc pour éviter le message d’erreur « Insecure completion-dependent directories detected »
 
 
 
@@ -388,6 +393,26 @@ le scanner sera alors utilisable via **simplescan**
 ## Steam
 * J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
 * Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
+
+
+
+<!--
+███╗   ██╗ █████╗ ███╗   ██╗ ██████╗ 
+████╗  ██║██╔══██╗████╗  ██║██╔═══██╗
+██╔██╗ ██║███████║██╔██╗ ██║██║   ██║
+██║╚██╗██║██╔══██║██║╚██╗██║██║   ██║
+██║ ╚████║██║  ██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+-->
+# nano
+Mes fichiers de configuration de nano permettent d’ajouter la coloration syntaxique et d’avoir une interface rouge pour root et bleu pour l’utilisateur
+```
+mkdir $HOME/.config/nano/
+curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/nanorc -o $HOME/.config/nano/nanorc
+sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/root.nanorc -o /root/.nanorc
+```
+
+
 
 
 
