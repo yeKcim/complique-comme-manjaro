@@ -1,0 +1,35 @@
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano-syntax-highlighting/*.nanorc"
+
+set smarthome                 # équivaut à alt+h
+# set morespace                 # équivaut à alt+o
+set autoindent                # équivaut à alt+i
+set smooth                    # équivaut à alt+s
+set softwrap                  # équivaut à ctrl+alt+$
+# set casesensitive             # recherche sensible à la casse quel raccourci clavier ?
+# set linenumbers               # équivaut à ctrl+alt+#
+set matchbrackets "(<[{)>]}"  # plus d’utilités pour alt+]
+set tabsize 4                 # tabulation de 4 au lieu de 8
+set tabstospaces              # espaces au lieu de tabulation
+
+bind ^S savefile main         # ctrl+s sauvegarde
+bind M-B cutwordleft main     # alt+b supprime le mot précédent le curseur
+bind M-N cutwordright main    # alt+n supprime le mot suivant le curseur
+bind ^Q exit main             # ctrl+q quitte
+bind M-* comment main         # les alt+num ne sont pas pratiques alt+* pour commenter
+bind M-' copytext main       # les alt+num ne sont pas pratiques alt+' pour copier
+
+## To include all existing syntax definitions, you can do:
+include "/usr/share/nano/*.nanorc"
+## Paint the interface elements of nano.
+ set titlecolor brightwhite,blue
+ set statuscolor brightwhite,green
+ set numbercolor cyan
+ set keycolor cyan
+ set functioncolor green
+## In root's .nanorc you might want to use:
+# set titlecolor brightwhite,red
+# set statuscolor brightwhite,red
+# set numbercolor magenta
+# set keycolor brightmagenta
+# set functioncolor magenta
