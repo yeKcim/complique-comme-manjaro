@@ -218,84 +218,20 @@ C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (so
 # zsh
 * Installation de Oh-My-ZSH : `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-## Thème
-* Je choisis parmi les [thèmes disponibles](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), le thème [agnoster](https://github.com/agnoster/agnoster-zsh-theme), je l’indiquerai dans mon fichier de configuration personnel
+## Personnalisation
+* Je choisis parmi les [thèmes disponibles](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), le thème [agnoster](https://github.com/agnoster/agnoster-zsh-theme), je l’indiquerai donc dans mon fichier de configuration personnel
+* J’active mes [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) préférés. Pour cela j'ajoute dans mon zshrc, via `nano $HOME/.zshrc` : `plugins=(archlinux common-aliases colored-man-pages colorize copydir copyfile cp extract git extract git rsync taskwarrior thefuck)`
+* Mon fichier de configuration : `curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh/yekcim.zsh -o $HOME/.oh-my-zsh/custom/yekcim.zsh`
 
-## Plugins
-* J’active mes [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) préférés :
-Pour cela j'ajoute dans mon zshrc, via `nano $HOME/.zshrc` :
-```
-plugins=(archlinux common-aliases colored-man-pages colorize copydir copyfile cp extract git extract git rsync taskwarrior thefuck zsh-interactive-cd)
-```
-Puis je tape `source ~/.zshrc` dans le terminal
-
-# Quelques personnalisations supplémentaires
-`nano $HOME/.oh-my-zsh/custom/yekcim.zsh`
-
-```
-ZSH_THEME="agnoster"
-DEFAULT_USER="yekcim"
-
-###### Highlighters ######
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(regexp main brackets pattern) # l’ordre à un sens, regexp avant main pour prioriser les guillemets
-# dangerous command
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=white,bold,bg=red')
-ZSH_HIGHLIGHT_PATTERNS+=('sudo' 'fg=white,bold,bg=red')
-# taskwarrior
-ZSH_HIGHLIGHT_REGEXP+=('\ \+[^ ]+' 'fg=227') # yellow tags (+txt)
-ZSH_HIGHLIGHT_REGEXP+=('[^ ]+\:' 'fg=140')   # purple attributes (txt:)
-ZSH_HIGHLIGHT_REGEXP+=('\ \-[^ ]+' 'fg=227') # yellow del tag (-xt), also useful to color args in all command
-ZSH_HIGHLIGHT_REGEXP+=('\ \_[^ ]+' 'fg=32')  # blue (_txt)
-
-##### Sources ######
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-###### ↑↓ pgup pgdn undo ######
-bindkey '^[[5~' history-beginning-search-backward               # Page up key
-bindkey '^[[6~' history-beginning-search-forward                # Page down key
-bindkey '^[[Z' undo 
-
-###### Colors ######
-alias diff='colordiff -u'
-alias dir='dir --color=always'
-alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
-
-###### Divers ######
-alias stat_sys="echo ' ' && uname -a && echo ' '&& uptime &&echo ' '&& df && echo ' '" # Affiche quelques statistiques à propos de l'ordinateur
-alias SAVE="rsync -avz --delete --exclude-from=/mnt/data/.rsync_exclude.txt --no-links /mnt/data /media/yekcim/yekdisk/yekcim-desktop/; rsync -avz --delete --exclude-from=/mnt/data/.rsync_exclude.txt --no-links /home/yekcim/ /media/yekcim/yekdisk/yekcim-desktop/home" # Backup
-alias freetv="vlc http://mafreebox.freebox.fr/freeboxtv/playlist.m3u" # freebox tv
-alias youtube-dl='youtube-dl --prefer-ffmpeg -f bestvideo+bestaudio' # youtube-dl
-
-##### Depuis manjaro-zsh-config ######
-setopt correct                                                  # Auto correct mistakes
-setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
-setopt nocaseglob                                               # Case insensitive globbing
-setopt rcexpandparam                                            # Array expension with parameters
-setopt nocheckjobs                                              # Don't warn about running processes when exiting
-setopt numericglobsort                                          # Sort filenames numerically when it makes sense
-setopt nobeep                                                   # No beep
-setopt appendhistory                                            # Immediately append history instead of overwriting
-setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
-setopt autocd                                                   # if only directory path is entered, cd there.
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path
-# Speed up completions
-zstyle ':completion:*' accept-exact '*(N)'
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
-```
-
-# Bug de démarrage de Tilix
+## Bug de démarrage de Tilix
 `nano  ~/.zshrc` pour ajouter :
 ```
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 ```
-# Pour root… (il faudra faire mieux)
+
+## Pour root… (il faudra faire mieux)
 Comme mon poste est mono-utilisateur je me permettre [un truc crade](https://askubuntu.com/questions/521469/oh-my-zsh-for-the-root-and-for-all-user) pour avoir ohmyzsh après un `sudo -s` :
 ```
 sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
