@@ -329,6 +329,12 @@ mkdir $HOME/.config/nano/
 curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/nanorc -o $HOME/.config/nano/nanorc
 sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/root.nanorc -o /root/.nanorc
 ```
+
+<p align="center">
+  <img src="nano.png">
+</p>
+
+
 # gedit
 Dans les préférences de Gedit :
 * Affichage : je coche 
