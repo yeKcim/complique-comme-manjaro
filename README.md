@@ -85,7 +85,6 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 * Génération de ma clé ssh : `ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519`
 * **ssh-copy** permettra d’envoyer ma clé sur les pc du réseau…
 
-
 <!--
 ██████╗  █████╗ ██████╗ ████████╗██╗████████╗██╗ ██████╗ ███╗   ██╗    ██████╗  █████╗ ████████╗ █████╗ 
 ██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██║╚══██╔══╝██║██╔═══██╗████╗  ██║    ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗
@@ -108,7 +107,6 @@ Par défaut, les dossiers Téléchargement, Bureau, Musique,… sont dans ~. Dan
 `gedit $HOME/.config/user-dirs.dirs`
 Un chmod et chown récursifs sont ensuite nécessaires pour que le dossier soit accessible pour l’utilisateur.
 
-
 <!--
  ██████╗ ███████╗███████╗████████╗    ██████╗  █████╗ ██████╗  █████╗ ███╗   ███╗
 ██╔════╝ ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗██╔══██╗██╔══██╗██╔══██╗████╗ ████║
@@ -123,7 +121,6 @@ Dans le **Gestionnaire de paramètres Manjaro** : je peux
 * installer les paquets linguistiques**
 * installer les pilotes de ma carte graphique
 ce que je fais.
-
 
 <!--
 ██████╗ ███████╗██████╗ ███████╗ ██████╗         ██████╗ ███╗   ██╗ ██████╗ ███╗   ███╗███████╗
@@ -168,8 +165,6 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
 
-
-
 <!--
 ██████╗ ███████╗██████╗ ███████╗ ██████╗        ██╗██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗ 
 ██╔══██╗██╔════╝██╔══██╗██╔════╝██╔═══██╗      ██╔╝██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝ 
@@ -183,8 +178,6 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * Remettre les icônes dans les menus (gimp, inkscape,…) : C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) il suffit de taper : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"` ([Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199))
 * Problème des ligatures grasses disgracieuses : `printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
 * Extensions Inkscape : `yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
-
-
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -223,7 +216,6 @@ sudo ln -s $HOME/.zshrc /root/.zshrc
 ```
 j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dans ~/.zshrc pour éviter le message d’erreur « Insecure completion-dependent directories detected »
 
-
 <!--      ███╗
 ██████╗ ███████╗██████╗  ██████╗ 
 ██╔══██╗██╔════╝██╔══██╗██╔═══██╗
@@ -253,7 +245,6 @@ BACKSPACE="guess"
 ne semble pas suffire mais mettre la valeur fr-bepo dans la variable KEYMAP `sudo nano /etc/vconsole.conf` résout le problème [source](https://wiki.archlinux.fr/dvorak)
 * Comment faire pour que GDM soit en bépo par défaut ?
 
-
 <!--
 ██╗███╗   ███╗██████╗ ██████╗ ██╗███╗   ███╗ █████╗ ███╗   ██╗████████╗███████╗
 ██║████╗ ████║██╔══██╗██╔══██╗██║████╗ ████║██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
@@ -274,7 +265,6 @@ yay brscan4
 sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5
 ```
 le scanner sera alors utilisable via **simplescan**
-
 
 <!--
 ███╗   ██╗ █████╗ ██╗   ██╗████████╗██╗██╗     ██╗   ██╗███████╗
@@ -302,8 +292,6 @@ le scanner sera alors utilisable via **simplescan**
 	* manque **lptools libav-tools(ffmpeg) cups-client**
 * J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
 
-
-
 <!--
      ██╗███████╗██╗   ██╗██╗  ██╗
      ██║██╔════╝██║   ██║╚██╗██╔╝
@@ -327,7 +315,6 @@ le scanner sera alors utilisable via **simplescan**
 	* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
 	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 
-
 <!--
   ███╗
 ███████╗██████╗ ██╗████████╗███████╗██╗   ██╗██████╗ ███████╗    ██████╗ ███████╗    ████████╗███████╗██╗  ██╗████████╗███████╗
@@ -338,11 +325,9 @@ le scanner sera alors utilisable via **simplescan**
 ╚══════╝╚═════╝ ╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
 -->
 # Éditeurs de texte
-
 J’utilise régulièrement gedit et nano lorsque je suis en console. J’essaye de passer à vi. J’ai donc 3 éditeurs de texte à configurer.
 
 ## nano
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano.png">
 </p>
@@ -354,7 +339,6 @@ curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nan
 sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/root.nanorc -o /root/.nanorc
 ```
 
-
 ## gedit
 Dans les préférences de Gedit :
 * Affichage : je coche 
@@ -365,13 +349,8 @@ Dans les préférences de Gedit :
 * Police et couleurs : Je coche **Utiliser la police système à chasse fixe (Hack 11)** et choisi le jeu de couleur **Solarisé foncé** 
 
 ## vi
-
-* ???????? `pacman -S vim-grammalecte vim-spell-fr powerline` ?????????
-
-
 * Installation du gestionnaire de plugins : `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-
-ajout de mon ~/.vimrc :
+* ajout de mon ~/.vimrc :
 ```
 "╔═╗╦  ╦ ╦╔═╗╦╔╗╔╔═╗
 "╠═╝║  ║ ║║ ╦║║║║╚═╗
@@ -393,44 +372,12 @@ execute pathogen#infect()
 filetype plugin indent on
 let g:airline_powerline_fonts = 1       " Enable powerline fonts
 ```
+* Lancement de vim, puis dans vim :
+	* :source ~/.vimrc
+	* :PlugInstall
+	* :AirlineTheme solarized
 
-Lancement de vim, puis dans vim :
-* :source ~/.vimrc
-* :PlugInstall
-* :AirlineTheme solarized
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-mkdir -p ~/.vim && cd "$_"
-git clone git@github.com:yeKcim/vim-bepo.git vim-bepo
-printf "source ~/.vim/plugin/bepo.vim" >> $HOME/.vimrc
-```
-
-
-
-
+* ???????? `pacman -S vim-grammalecte vim-spell-fr powerline` ?????????
 
 # Reste à voir :
 * aur dans pacman ?
