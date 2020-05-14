@@ -1,0 +1,119 @@
+set number                              			" afficher numéro de lignes
+set fileformats=unix,mac,dos            			" gestion des retours chariot en fonction du type de fichier
+set hlsearch                            			" surligne les résultats de la recherche
+set autochdir                           			" Modifie le répertoire courant pour vim en fonction du fichier ouvert
+"***** Indentation *****
+set autoindent                          			" indentation automatique avancée
+set smartindent                      				" indentation plus intelligente
+set shiftwidth=4                        			" taille des tabulations (nb d'espace)
+set tabstop=4                           			" taille des tabulations à l'affichage (nb d'espace)
+"***** Recherche *****
+set incsearch                           			" recherche en même temps que la saisie
+set ignorecase                          			" ne pas prendre en compte la casse pour les recherches
+"set noic											" Prendre en compte la casse pour les recherches
+set smartcase                           			" recherche respectueuse de la case quand une majuscule est saisie
+noremap <F2> :set hlsearch!<cr>:set hlsearch?<cr>	" Activer/désactiver la surbrillance des recherches avec F2
+
+"***** Ajouts raccourcis splits *****
+map <C-w><Space> :split<Space>
+map <C-w><Return> :vsplit<Space>
+
+"***** Recharger vimrc après modif *****
+if has("autocmd")
+  autocmd! bufwritepost vimrc source ~/.vim/vimrc
+endif
+
+" leader key
+let mapleader = "à"
+let g:mapleader = "à"
+
+" Sauvegarde rapide
+nmap <leader>w :w<cr>
+imap <leader>w <esc>:w<cr>
+nmap <leader>q :wq<cr>
+imap <leader>q <esc>:wq<cr>
+map <leader>a <Esc>:wa<CR>
+" Sauvegarder et exécuter le fichier courant
+nmap <leader>x :w<cr>:!./"%"<cr>
+" Édition rapide de vimrc avec <leader>+e
+map <leader>e :e! ~/.vim/vimrc<cr>
+" Save with sudo permissions
+nmap <leader>s :w !sudo tee %<cr>
+imap <leader>s <esc>:w !sudo tee %<cr>
+
+" ╔═╗╔═╗╦  ╔═╗╦═╗╔═╗╔╦╗╦╔═╗╔╗╔  ╔═╗╦ ╦╔╗╔╔╦╗╔═╗═╗ ╦╦╔═╗ ╦ ╦╔═╗   ╔╦╗╦ ╦╔═╗╔╦╗╔═╗
+" ║  ║ ║║  ║ ║╠╦╝╠═╣ ║ ║║ ║║║║  ╚═╗╚╦╝║║║ ║ ╠═╣╔╩╦╝║║═╬╗║ ║║╣  ═  ║ ╠═╣║╣ ║║║║╣
+" ╚═╝╚═╝╩═╝╚═╝╩╚═╩ ╩ ╩ ╩╚═╝╝╚╝  ╚═╝ ╩ ╝╚╝ ╩ ╩ ╩╩ ╚═╩╚═╝╚╚═╝╚═╝    ╩ ╩ ╩╚═╝╩ ╩╚═╝
+" mkdir -p ~/.vim/colors && cd "$_"
+" raw="https://raw.githubusercontent.com"
+" wget $raw/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow{,-Night{,-Eighties,-Bright,-Blue}}.vim
+" wget $raw/zacanger/angr.vim/master/colors/angr.vim
+" wget $raw/altercation/vim-colors-solarized/master/colors/solarized.vim
+syntax on                               			" coloration syntaxique ON par défaut ⇔ « :syntax on »
+colorscheme Tomorrow-Night-Eighties					" theme
+" Whitespaces and extra character
+" '⏎' to mark an end of line, '␠' to mark extra white space at the end of a line, '⎵' to mark nbsp (fixed spaces,…)
+set list
+set listchars=eol:⏎,nbsp:⎵,tab:▸·,extends:>,precedes:<,trail:␠
+" Afficher les espaces superflus en gris clair
+highlight ExtraWhitespace ctermbg=darkgray guibg=lightred
+match ExtraWhitespace /\s\+$/
+
+" ╔═╗╦  ╦ ╦╔═╗
+" ╠═╝║  ║ ║║ ╦
+" ╩  ╩═╝╚═╝╚═╝ Gestionnaire de plugins vim
+" Installation automatique de plug :
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+" « :source ~/.vimrc » puis « :PlugInstall ». q pour quitter.
+" Commandes : https://github.com/junegunn/vim-plug#commands
+call plug#begin('~/.vim/plugged')
+    Plug 'vim-airline/vim-airline'					" status/tabline
+    Plug 'vim-airline/vim-airline-themes'			" thèmes pour airline
+    Plug 'tpope/vim-fugitive'						" git dans airline
+    Plug 'mhinz/vim-signify'						" git diff in sign column
+    Plug 'yeKcim/vim-bepo'							" bépo mapping
+    Plug 'mbbill/undotree'							" Undo history visualizer
+    Plug 'airblade/vim-gitgutter'    				" Shows git diff in the gutter
+    Plug 'tpope/vim-surround'             			" easily delete, change and add such surroundings in pairs
+    Plug 'Raimondi/delimitMate'						" automatiquement fermer accolades, parenthéses et autre guillemets
+    Plug 'vim-scripts/colorizer'					" coloration des couleurs #dea05f
+    Plug 'kshenoy/vim-signature'					" afficher les marques
+    Plug 'tpope/vim-commentary'						" commenter/décommenter avec reconnaissance automatique du langage
+call plug#end()
+
+" ╦  ╦╦╔╦╗  ╔═╗╦╦═╗╦  ╦╔╗╔╔═╗
+" ╚╗╔╝║║║║══╠═╣║╠╦╝║  ║║║║║╣
+"  ╚╝ ╩╩ ╩  ╩ ╩╩╩╚═╩═╝╩╝╚╝╚═╝ configuration du plugin vim-airline
+set laststatus=2 									" Set a status line
+set encoding=utf-8  								" Set encoding so that your fonts look okay.
+filetype plugin indent on
+let g:airline_powerline_fonts = 1					" Enable powerline fonts
+let g:airline_theme='murmur'
+
+" ╔═╗╔╗ ╦═╗╔═╗╦  ╦╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
+" ╠═╣╠╩╗╠╦╝║╣ ╚╗╔╝║╠═╣ ║ ║║ ║║║║╚═╗
+" ╩ ╩╚═╝╩╚═╚═╝ ╚╝ ╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝ abbréviation+tab=
+iabbrev cad c’est-à-dire
+iabbrev svp s’il-vous-plaît
+iabbrev stp s’il-te-plaît
+iabbrev pcq parce que
+iabbrev h1 <h1></h1>
+iabbrev h2 <h2></h2>
+iabbrev h3 <h3></h3>
+iabbrev h4 <h5></h4>
+iabbrev ah <a href=></a>
+
+" ╔═╗╦═╗╔═╗╔═╗╔═╗╔═╗   ╔═╗╔═╗╔═╗╦╔═╗╦═╗
+" ╠═╝╠╦╝║╣ ╚═╗╚═╗║╣  ═ ╠═╝╠═╣╠═╝║║╣ ╠╦╝
+" ╩  ╩╚═╚═╝╚═╝╚═╝╚═╝   ╩  ╩ ╩╩  ╩╚═╝╩╚═
+" Le texte sélectionné en mode visuel est collé dans le presse-papier PRIMARY
+set clipboard=autoselect
+" Copier vers le presse papier graphique avec CTRL-C en mode visuel
+vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+
+"""" TODO """""
+" undotree ?
+" correction orthographique ?

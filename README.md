@@ -2,6 +2,9 @@ Mes notes post installation de Manjaro. C'est en vrac, ça n’engage que moi, c
 
 J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’utilitaire de mise à jour.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/logo_manjaro.svg">
+</p>
 
 <!--
 ██████╗  █████╗  ██████╗ ██╗   ██╗███████╗████████╗███████╗
