@@ -366,10 +366,73 @@ Dans les préférences de Gedit :
 
 ## vi
 
-`pacman -S vim-grammalecte vim-spell-fr powerline` ?????????
+* ???????? `pacman -S vim-grammalecte vim-spell-fr powerline` ?????????
+
+
+* Installation du gestionnaire de plugins : `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+
+ajout de mon ~/.vimrc :
+```
+"██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
+"██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
+"██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
+"██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
+"██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
+"╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
+call plug#begin('~/.vim/plugged')
+    " Make sure you use single quotes
+    Plug 'yeKcim/vim-bepo'          		" mon plugin bépo
+    Plug 'vim-airline/vim-airline'  		" status/tabline for vim
+    Plug 'vim-airline/vim-airline-themes'   " airline-themes
+" Initialize plugin system
+call plug#end()
+
+" █████╗ ██╗██████╗ ██╗     ██╗███╗   ██╗███████╗     ██████╗ ██████╗ ███╗   ██╗███████╗
+"██╔══██╗██║██╔══██╗██║     ██║████╗  ██║██╔════╝    ██╔════╝██╔═══██╗████╗  ██║██╔════╝
+"███████║██║██████╔╝██║     ██║██╔██╗ ██║█████╗      ██║     ██║   ██║██╔██╗ ██║█████╗
+"██╔══██║██║██╔══██╗██║     ██║██║╚██╗██║██╔══╝      ██║     ██║   ██║██║╚██╗██║██╔══╝
+"██║  ██║██║██║  ██║███████╗██║██║ ╚████║███████╗    ╚██████╗╚██████╔╝██║ ╚████║██║  
+"╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  
+set laststatus=2                        " Set a status line
+set encoding=utf-8                      " Set encoding so that your fonts look okay.
+execute pathogen#infect()
+filetype plugin indent on
+let g:airline_powerline_fonts = 1       " Enable powerline fonts
+```
+
+Lancement de vim, puis dans vim :
+* :source ~/.vimrc
+* :PlugInstall
+* :AirlineTheme solarized
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+mkdir -p ~/.vim && cd "$_"
+git clone git@github.com:yeKcim/vim-bepo.git vim-bepo
+printf "source ~/.vim/plugin/bepo.vim" >> $HOME/.vimrc
+```
 
 
 
