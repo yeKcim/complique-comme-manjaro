@@ -190,7 +190,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 # zsh
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh.png">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh.jpg">
 </p>
 
 * Installation de Oh-My-ZSH : `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
@@ -304,6 +304,7 @@ le scanner sera alors utilisable via **simplescan**
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vitetris.png">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/steam.jpg">
 </p>
 
 * `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu vitetris`
@@ -329,7 +330,7 @@ J’utilise régulièrement gedit et nano lorsque je suis en console. J’essaye
 
 ## nano
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano.png">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano.jpg">
 </p>
 
 Mes fichiers de configuration de nano permettent d’ajouter la coloration syntaxique et d’avoir une interface rouge pour root et bleu pour l’utilisateur
