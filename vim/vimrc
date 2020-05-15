@@ -4,13 +4,13 @@ set hlsearch                            			" surligne les résultats de la reche
 set autochdir                           			" Modifie le répertoire courant pour vim en fonction du fichier ouvert
 "***** Indentation *****
 set autoindent                          			" indentation automatique avancée
-set smartindent                      				" indentation plus intelligente
+set smartindent                         			" indentation plus intelligente
 set shiftwidth=4                        			" taille des tabulations (nb d'espace)
 set tabstop=4                           			" taille des tabulations à l'affichage (nb d'espace)
 "***** Recherche *****
-set incsearch                           			" recherche en même temps que la saisie
+"set incsearch                          			" recherche en même temps que la saisie
 set ignorecase                          			" ne pas prendre en compte la casse pour les recherches
-"set noic											" Prendre en compte la casse pour les recherches
+"set noic                               			" Prendre en compte la casse pour les recherches
 set smartcase                           			" recherche respectueuse de la case quand une majuscule est saisie
 noremap <F2> :set hlsearch!<cr>:set hlsearch?<cr>	" Activer/désactiver la surbrillance des recherches avec F2
 
@@ -41,24 +41,6 @@ map <leader>e :e! ~/.vim/vimrc<cr>
 nmap <leader>s :w !sudo tee %<cr>
 imap <leader>s <esc>:w !sudo tee %<cr>
 
-" ╔═╗╔═╗╦  ╔═╗╦═╗╔═╗╔╦╗╦╔═╗╔╗╔  ╔═╗╦ ╦╔╗╔╔╦╗╔═╗═╗ ╦╦╔═╗ ╦ ╦╔═╗   ╔╦╗╦ ╦╔═╗╔╦╗╔═╗
-" ║  ║ ║║  ║ ║╠╦╝╠═╣ ║ ║║ ║║║║  ╚═╗╚╦╝║║║ ║ ╠═╣╔╩╦╝║║═╬╗║ ║║╣  ═  ║ ╠═╣║╣ ║║║║╣
-" ╚═╝╚═╝╩═╝╚═╝╩╚═╩ ╩ ╩ ╩╚═╝╝╚╝  ╚═╝ ╩ ╝╚╝ ╩ ╩ ╩╩ ╚═╩╚═╝╚╚═╝╚═╝    ╩ ╩ ╩╚═╝╩ ╩╚═╝
-" mkdir -p ~/.vim/colors && cd "$_"
-" raw="https://raw.githubusercontent.com"
-" wget $raw/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow{,-Night{,-Eighties,-Bright,-Blue}}.vim
-" wget $raw/zacanger/angr.vim/master/colors/angr.vim
-" wget $raw/altercation/vim-colors-solarized/master/colors/solarized.vim
-syntax on                               			" coloration syntaxique ON par défaut ⇔ « :syntax on »
-colorscheme Tomorrow-Night-Eighties					" theme
-" Whitespaces and extra character
-" '⏎' to mark an end of line, '␠' to mark extra white space at the end of a line, '⎵' to mark nbsp (fixed spaces,…)
-set list
-set listchars=eol:⏎,nbsp:⎵,tab:▸·,extends:>,precedes:<,trail:␠
-" Afficher les espaces superflus en gris clair
-highlight ExtraWhitespace ctermbg=darkgray guibg=lightred
-match ExtraWhitespace /\s\+$/
-
 " ╔═╗╦  ╦ ╦╔═╗
 " ╠═╝║  ║ ║║ ╦
 " ╩  ╩═╝╚═╝╚═╝ Gestionnaire de plugins vim
@@ -76,19 +58,35 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-signify'						" git diff in sign column
     Plug 'yeKcim/vim-bepo'							" bépo mapping
     Plug 'mbbill/undotree'							" Undo history visualizer
-    Plug 'airblade/vim-gitgutter'    				" Shows git diff in the gutter
-    Plug 'tpope/vim-surround'             			" easily delete, change and add such surroundings in pairs
+    Plug 'airblade/vim-gitgutter'					" Shows git diff in the gutter
+    Plug 'tpope/vim-surround'						" easily delete, change and add such surroundings in pairs
     Plug 'Raimondi/delimitMate'						" automatiquement fermer accolades, parenthéses et autre guillemets
     Plug 'vim-scripts/colorizer'					" coloration des couleurs #dea05f
     Plug 'kshenoy/vim-signature'					" afficher les marques
     Plug 'tpope/vim-commentary'						" commenter/décommenter avec reconnaissance automatique du langage
+    Plug 'lifepillar/vim-solarized8'				" installation automatique du thème"
 call plug#end()
+
+" ╔═╗╔═╗╦  ╔═╗╦═╗╔═╗╔╦╗╦╔═╗╔╗╔  ╔═╗╦ ╦╔╗╔╔╦╗╔═╗═╗ ╦╦╔═╗ ╦ ╦╔═╗   ╔╦╗╦ ╦╔═╗╔╦╗╔═╗
+" ║  ║ ║║  ║ ║╠╦╝╠═╣ ║ ║║ ║║║║  ╚═╗╚╦╝║║║ ║ ╠═╣╔╩╦╝║║═╬╗║ ║║╣  ═  ║ ╠═╣║╣ ║║║║╣
+" ╚═╝╚═╝╩═╝╚═╝╩╚═╩ ╩ ╩ ╩╚═╝╝╚╝  ╚═╝ ╩ ╝╚╝ ╩ ╩ ╩╩ ╚═╩╚═╝╚╚═╝╚═╝    ╩ ╩ ╩╚═╝╩ ╩╚═╝
+syntax on                               " coloration syntaxique ON par défaut ⇔ « :syntax on »
+" Whitespaces and extra character
+" '⏎' to mark an end of line, '␠' to mark extra white space at the end of a line, '⎵' to mark nbsp (fixed spaces,…)
+set list
+set listchars=eol:⏎,nbsp:⎵,tab:⟶·,extends:>,precedes:<,trail:␠
+" Afficher les espaces superflus en gris clair
+highlight ExtraWhitespace ctermbg=darkgray guibg=lightred
+match ExtraWhitespace /\s\+$/
+
+set background=dark
+colorscheme solarized8_high
 
 " ╦  ╦╦╔╦╗  ╔═╗╦╦═╗╦  ╦╔╗╔╔═╗
 " ╚╗╔╝║║║║══╠═╣║╠╦╝║  ║║║║║╣
 "  ╚╝ ╩╩ ╩  ╩ ╩╩╩╚═╩═╝╩╝╚╝╚═╝ configuration du plugin vim-airline
-set laststatus=2 									" Set a status line
-set encoding=utf-8  								" Set encoding so that your fonts look okay.
+set laststatus=2 						" Set a status line
+set encoding=utf-8						" Set encoding so that your fonts look okay.
 filetype plugin indent on
 let g:airline_powerline_fonts = 1					" Enable powerline fonts
 let g:airline_theme='murmur'
