@@ -65,6 +65,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kshenoy/vim-signature'					" afficher les marques
     Plug 'tpope/vim-commentary'						" commenter/décommenter avec reconnaissance automatique du langage
     Plug 'lifepillar/vim-solarized8'				" installation automatique du thème"
+    Plug 'dpelle/vim-grammalecte'					" grammalecte
 call plug#end()
 
 " ╔═╗╔═╗╦  ╔═╗╦═╗╔═╗╔╦╗╦╔═╗╔╗╔  ╔═╗╦ ╦╔╗╔╔╦╗╔═╗═╗ ╦╦╔═╗ ╦ ╦╔═╗   ╔╦╗╦ ╦╔═╗╔╦╗╔═╗
