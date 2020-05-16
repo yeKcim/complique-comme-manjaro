@@ -22,8 +22,8 @@ texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg
 gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell gedit-plugins \
-ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} \
-{awesome-terminal,powerline}-fonts python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte \
+ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
+python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell \
 linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
 zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 ```
@@ -382,3 +382,5 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 * tmux
 * autojump ?
 * nano en couleur ?
+* shotwell ou digikam ?
+* easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp…
