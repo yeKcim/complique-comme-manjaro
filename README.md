@@ -23,8 +23,8 @@ gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell gedit-plugins \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
-python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell \
-linux-steam-integration digikam libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
+python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint \
+linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
 zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 ```
 
@@ -65,11 +65,14 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 	* Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
 	* Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
-* Quelques outils utiles pour le boulot :
+
+
+Quelques outils utiles pour le boulot :
 	* `yay scidavis`
+	* `yay alphaplot`
 	* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
 	* `yay freecad`
-
+	* `sudo pacman -S octave`
 
 
 <!--
@@ -364,6 +367,7 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 	* https://github.com/michamos/vim-bepo
 * parefeu ?
 * xorg-xkill ?
+* `yay losslesscut`
 * dvd ?
 * cura/impression3D ? 
 * Émulateurs ?
@@ -371,16 +375,14 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 * [rezonator2](https://github.com/orion-project/rezonator2)
 * [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
 * Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
-* `yay gnuplot` montre pleins de logiciels qui donnent envie, à tester :
-	* cueplot ?
-	* [eplot](https://github.com/chriswolfvision/eplot) et [gnuplotme](gnuplotme) semblent juste ajouter une couche de plus
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ? ascii ?
 # À tester ?
 * `yay openpose`
+* `yay untrunc` pour réparer les mp4 ?
 * gitqlient
 * tmux
 * autojump ?
 * nano en couleur ?
 * shotwell ou digikam ?
-* easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp…
+* easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp… mais je finis par supprimer ce paquet car les dossiers du bureau s’ouvre avec easytag…
