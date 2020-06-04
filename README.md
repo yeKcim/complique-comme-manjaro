@@ -65,7 +65,8 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 	* Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
 	* Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
-
+* `yay python2-gimp` et `yay gimp-plugin-resynthesizer` pour avoir **heal selection** dans gimp, un outil indispensable
+* `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
 
 Quelques outils utiles pour le boulot :
 	* `yay scidavis`
@@ -73,7 +74,8 @@ Quelques outils utiles pour le boulot :
 	* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
 	* `yay freecad`
 	* `sudo pacman -S octave`
-
+	* `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel)
+	* `yay zoom`
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -321,6 +323,7 @@ le scanner sera alors utilisable via **simplescan**
 * Steam
 	* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
 	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
+* Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce`
 
 <!--
   ███╗
@@ -386,3 +389,4 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 * nano en couleur ?
 * shotwell ou digikam ?
 * easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp… mais je finis par supprimer ce paquet car les dossiers du bureau s’ouvre avec easytag…
+* yay torbrowser-launcher
