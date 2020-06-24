@@ -201,9 +201,9 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 
 ## Correcteur grammatical grammalecte
-	* `yay libreoffice-extension-grammalecte-fr`
-	* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
-	* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
+* `yay libreoffice-extension-grammalecte-fr`
+* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
+* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
 	
 ## Blender
 * `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
