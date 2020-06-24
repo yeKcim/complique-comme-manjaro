@@ -41,7 +41,7 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 	* supprimer les dépendances non nécessaires : `yay -Yc`
 	* quelques stats : `yay -Ps`
 	* remove : `yay -R nomdepaquet`
-
+	* installation avec modification `yay --editmenu -S nomdepaquet`
 
 <!--
  █████╗ ██╗   ██╗██████╗ 
@@ -56,17 +56,12 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 	* [cht.sh](http://cht.sh/) : `yay cht.sh`
 	* [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
 	* livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
-* Correcteur grammatical
-	* `yay libreoffice-extension-grammalecte-fr`
-	* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
-	* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
 * Polices
 	* Pour avoir la police Sawasdee : `yay ttf-tlwg`
 	* Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
 	* Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
-* `yay python2-gimp` et `yay gimp-plugin-resynthesizer` pour avoir **heal selection** dans gimp, un outil indispensable
-* `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
+* `yay marktext` (À l’air sympa mais ne s’installe pas pour l’instant)
 
 Quelques outils utiles pour le boulot :
 	* `yay scidavis`
@@ -157,7 +152,18 @@ ce que je fais.
 ## Layouts
 Je choisi la disposition Modern et dans les paramètres je coche l’option **Desktop icons**.
 
-## Extensions Gnome-shell
+
+<!--
+███████╗██╗  ██╗████████╗███████╗███╗   ██╗███████╗██╗ ██████╗ ███╗   ██╗███████╗
+██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝████╗  ██║██╔════╝██║██╔═══██╗████╗  ██║██╔════╝
+█████╗   ╚███╔╝    ██║   █████╗  ██╔██╗ ██║███████╗██║██║   ██║██╔██╗ ██║███████╗
+██╔══╝   ██╔██╗    ██║   ██╔══╝  ██║╚██╗██║╚════██║██║██║   ██║██║╚██╗██║╚════██║
+███████╗██╔╝ ██╗   ██║   ███████╗██║ ╚████║███████║██║╚██████╔╝██║ ╚████║███████║
+╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+-->
+# Extensions
+
+## Gnome-shell
 * [Voir le nom complet des applications dans le menu](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
 * [Calendar Improved](https://extensions.gnome.org/extension/2386/calendar-improved/)
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
@@ -173,6 +179,35 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
 
+## Inkscape
+* Extensions Inkscape : `yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
+
+## Gimp
+* `yay python2-gimp` et `yay gimp-plugin-resynthesizer` pour avoir **heal selection** (Filtre → Amélioration → Corriger la sélection)
+
+## Thunderbird
+* [Thunderbird Conversations](https://addons.thunderbird.net/fr/thunderbird/addon/gmail-conversation-view/)
+* [gContactSync](https://addons.thunderbird.net/fr/thunderbird/addon/gcontactsync/?src=userprofile)
+
+## Firefox
+* [Cozy - Cloud personnel](https://addons.mozilla.org/fr/firefox/addon/cozy-personal-cloud/)
+* [Dark Reader](https://addons.mozilla.org/fr/firefox/addon/darkreader/)
+* [GSConnect](https://addons.mozilla.org/fr/firefox/addon/gsconnect/)
+* [I don't care about cookies](https://addons.mozilla.org/fr/firefox/addon/i-dont-care-about-cookies/) est-ce que ça valide tout ???
+* [Simple Tab Groups](https://addons.mozilla.org/fr/firefox/addon/simple-tab-groups/)
+* [Tab Suspender](https://addons.mozilla.org/fr/firefox/addon/ff-tab-suspender/)
+* [Textarea Cache](https://addons.mozilla.org/fr/firefox/addon/textarea-cache/?src=search)
+* [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/?src=search)
+
+
+## Correcteur grammatical grammalecte
+	* `yay libreoffice-extension-grammalecte-fr`
+	* [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
+	* [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
+	
+## Blender
+* `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
+
 <!--
 ██████╗ ███████╗██████╗ ███████╗ ██████╗        ██╗██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗ 
 ██╔══██╗██╔════╝██╔══██╗██╔════╝██╔═══██╗      ██╔╝██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝ 
@@ -185,7 +220,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 * Remettre les icônes dans les menus (gimp, inkscape,…) : C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) il suffit de taper : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"` ([Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199))
 * Problème des ligatures grasses disgracieuses : `printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
-* Extensions Inkscape : `yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
+
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -239,7 +274,7 @@ j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dan
 </p>
 
 * Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
-* Dans **Ajustements → Clavier et souris** : J'active **Compose** (Super droit)
+* Dans **Ajustements → Clavier et souris** : J'active **Compose** (**Super droit** pour mon Ergodox et **Menu** sur mon TypeMatrix)
 * Pour que bépo soit pris en compte dans tty :
 `nano /etc/default/keyboard`
 ```
@@ -324,6 +359,7 @@ le scanner sera alors utilisable via **simplescan**
 	* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
 	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 * Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce`
+* Le client gog : `yay minigalaxy` ? ou le client officiel (je ne retrouve pas le mail de la beta fermé de gog 2) ?
 
 <!--
   ███╗
