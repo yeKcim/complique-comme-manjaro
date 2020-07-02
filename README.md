@@ -25,7 +25,7 @@ yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan s
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
-zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
+zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting vim
 ```
 
 # Memo gestion des paquets
@@ -360,7 +360,9 @@ le scanner sera alors utilisable via **simplescan**
 	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 * Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce`
 * Le client gog : `yay minigalaxy` ? ou le client officiel (je ne retrouve pas le mail de la beta fermé de gog 2) ?
-
+* `yay lutris` pour installer :
+    * [Uplay](https://lutris.net/games/uplay/) pour installer **Trackmania 2020 Starter**
+    * [Magic the gathering arena](https://lutris.net/games/magic-the-gathering-arena/)
 <!--
   ███╗
 ███████╗██████╗ ██╗████████╗███████╗██╗   ██╗██████╗ ███████╗    ██████╗ ███████╗    ████████╗███████╗██╗  ██╗████████╗███████╗
@@ -397,18 +399,17 @@ Dans les préférences de Gedit :
 ## vim
 * Téléchargement de mon fichier de config : `curl -fLo ~/.vimrc --create-dirs https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vim/vimrc`
 Ce fichier de configuration vérifie que le gestionnaire de plugin est installé. S’il ne l’est pas, il est téléchargé automatiquement, l’active et installe les plugins de la liste.
+* Au premier lancement, un message d’erreur m’indique que le thème n’a pas été trouvé, il suffit alors de lancer `:PlugInstall`
 
 * ???????? `pacman -S vim-grammalecte vim-spell-fr` ?????????
 
 # Reste à voir :
 * aur dans pacman ?
-* vi ?
-	* https://github.com/michamos/vim-bepo
 * parefeu ?
 * xorg-xkill ?
 * `yay losslesscut`
 * dvd ?
-* cura/impression3D ? 
+* cura/impression3D ? `yay meshlab`
 * Émulateurs ?
 * bta-3100
 * [rezonator2](https://github.com/orion-project/rezonator2)
