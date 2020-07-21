@@ -16,12 +16,12 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 -->
 # Paquets
 ```
-sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape openscad owncloud-client playonlinux tilix \
+sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape darktable openscad owncloud-client playonlinux \
 celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting \
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
-yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell gedit-plugins \
+yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell gedit-plugins tilix \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
