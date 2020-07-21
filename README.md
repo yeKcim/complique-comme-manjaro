@@ -16,8 +16,8 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 -->
 # Paquets
 ```
-sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape darktable openscad owncloud-client playonlinux \
-celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting \
+sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape darktable rawtherapee openscad owncloud-client \
+celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting playonlinux\
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
@@ -64,13 +64,14 @@ zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-high
 * `yay marktext` (À l’air sympa mais ne s’installe pas pour l’instant)
 
 Quelques outils utiles pour le boulot :
-	* `yay scidavis`
-	* `yay alphaplot`
-	* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
-	* `yay freecad`
-	* `sudo pacman -S octave`
-	* `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel)
-	* `yay zoom`
+* `yay scidavis`
+* `yay alphaplot`
+* `yay freecad`
+* `sudo pacman -S octave`
+Et éventuellement :
+* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
+* `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel)
+* `yay zoom`
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -403,11 +404,14 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 
 * ???????? `pacman -S vim-grammalecte vim-spell-fr` ?????????
 
+
+
 # Reste à voir :
 * aur dans pacman ?
 * parefeu ?
 * xorg-xkill ?
 * `yay losslesscut`
+* `yay magicavoxel` en attendant de trouver le libre qui me conviendra
 * dvd ?
 * cura/impression3D ? `yay meshlab`
 * Émulateurs ?
