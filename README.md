@@ -16,16 +16,16 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 -->
 # Paquets
 ```
-sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape darktable rawtherapee openscad owncloud-client \
+sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape darktable openscad owncloud-client \
 celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting playonlinux\
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
-gnuplot p7zip htop pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
+gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
-yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan shotwell gedit-plugins tilix \
+yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
-zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting vim
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim
 ```
 
 # Memo gestion des paquets
@@ -122,7 +122,7 @@ Un chmod et chown récursifs sont ensuite nécessaires pour que le dossier soit 
 # Gestionaire de paramètres Manjaro
 Dans le **Gestionnaire de paramètres Manjaro** : je peux
 * mettre à jour le noyau
-* installer les paquets linguistiques**
+* installer les paquets linguistiques
 * installer les pilotes de ma carte graphique
 ce que je fais.
 
@@ -143,7 +143,7 @@ ce que je fais.
 	* le thème shell pour **Arc-Dark**
 * __Barre de titre des fenêtres__ Le clic milieu sur la barre de titre fait l’action Lower
 * __Fenêtres__ je désactive les dialogues modaux
-* __Polices__ je modifie le Facteur de mise à l’échelle pour 0,8
+* __Polices__ je modifie le Facteur de mise à l’échelle pour 0,8 ou 0,9 selon mon écran
 * __Applications au démarrage__ j’ajoute ici pavucontrol (mais comment ?)
 
 ## Paramètres
@@ -406,6 +406,12 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 
 
 
+# Notes : Chacun ses goûts !
+* J’ai testé **Rawtherapee** et **Darktable**, c’est le second qui m’a le plus convaincu
+* Je suis passé de **Shotwell** à **Digikam** puis de **Digikam** à **Shotwell**, chacun ses goûts, je garde le plus léger
+* J’aurais aimé tester **nautilus-ext-git** mais il ne semble pas fonctionner sur mon poste, je lui préfère donc **rabbitvcs-nautilus**
+
+
 # Reste à voir :
 * aur dans pacman ?
 * parefeu ?
@@ -421,13 +427,21 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 * Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ? ascii ?
+* nano en couleur ?
+* easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp… mais je finis par supprimer ce paquet car les dossiers du bureau s’ouvre avec easytag…
+
 # À tester ?
 * `yay openpose`
 * `yay untrunc` pour réparer les mp4 ?
 * gitqlient
 * tmux
 * autojump ?
-* nano en couleur ?
-* shotwell ou digikam ?
-* easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp… mais je finis par supprimer ce paquet car les dossiers du bureau s’ouvre avec easytag…
 * yay torbrowser-launcher
+* virtualbox{,-guest-utils,-guest-iso} ?
+
+## Jeux :  
+```
+yay redeclipse-bin
+yay anticube2-git
+```
+* Émulateurs ?
