@@ -23,13 +23,14 @@ gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs k
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
-python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint \
+python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
 zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim
 ```
 
 # Memo gestion des paquets
 * Pacman
+	* Optimisation des miroirs : `sudo pacman-mirrors --fasttrack` ([source](https://itsfoss.com/things-to-do-after-installing-manjaro/))
 	* Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
 	* update : `sudo pacman -Sy`
 	* upgrade : `sudo pacman -Syu`
@@ -110,6 +111,10 @@ UUID="3c10ccb9-e438-4c73-aebc-7d5456a4d5ef" /mnt/data/ ext4 defaults 0 2
 Par défaut, les dossiers Téléchargement, Bureau, Musique,… sont dans ~. Dans mon cas, il est nécessaire de les déplacer dans /mnt/data. Pour cela, il suffit de remplacer $HOME dans le fichier de configuration :
 `gedit $HOME/.config/user-dirs.dirs`
 Un chmod et chown récursifs sont ensuite nécessaires pour que le dossier soit accessible pour l’utilisateur.
+
+# SSD
+Si la partition root est installée sur un SSD, activer TRIM : `sudo systemctl enable fstrim.timer` ([source](https://itsfoss.com/things-to-do-after-installing-manjaro/))
+
 
 <!--
  ██████╗ ███████╗███████╗████████╗    ██████╗  █████╗ ██████╗  █████╗ ███╗   ███╗
@@ -414,6 +419,7 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 
 # Reste à voir :
 * aur dans pacman ?
+* Nettoyage cache yay
 * parefeu ?
 * xorg-xkill ?
 * `yay losslesscut`
@@ -429,6 +435,8 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 * dictionnaire ? traduction ? ascii ?
 * nano en couleur ?
 * easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp… mais je finis par supprimer ce paquet car les dossiers du bureau s’ouvre avec easytag…
+* `yay turtlesport` / `yay mytourbook`
+* Python : `sudo pacman -S jupyter-notebook spyder`
 
 # À tester ?
 * `yay openpose`
@@ -438,6 +446,8 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 * autojump ?
 * yay torbrowser-launcher
 * virtualbox{,-guest-utils,-guest-iso} ?
+* minetest ?
+* siril
 
 ## Jeux :  
 ```
