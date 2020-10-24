@@ -67,7 +67,6 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 Quelques outils utiles pour le boulot :
 * `yay scidavis`
 * `yay alphaplot`
-* `yay freecad`
 * `sudo pacman -S octave`
 Et éventuellement :
 * [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
@@ -315,6 +314,29 @@ sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5
 ```
 le scanner sera alors utilisable via **simplescan**
 
+
+<!--
+██╗███╗   ███╗██████╗ ██████╗ ██╗███╗   ███╗ █████╗ ███╗   ██╗████████╗███████╗    ██████╗ ██████╗ 
+██║████╗ ████║██╔══██╗██╔══██╗██║████╗ ████║██╔══██╗████╗  ██║╚══██╔══╝██╔════╝    ╚════██╗██╔══██╗
+██║██╔████╔██║██████╔╝██████╔╝██║██╔████╔██║███████║██╔██╗ ██║   ██║   █████╗       █████╔╝██║  ██║
+██║██║╚██╔╝██║██╔═══╝ ██╔══██╗██║██║╚██╔╝██║██╔══██║██║╚██╗██║   ██║   ██╔══╝       ╚═══██╗██║  ██║
+██║██║ ╚═╝ ██║██║     ██║  ██║██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   ███████╗    ██████╔╝██████╔╝
+╚═╝╚═╝     ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝    ╚═════╝ ╚═════╝ 
+-->
+# Impression 3D
+
+## Ultimaker Cura
+
+Cura est dans la liste des paquets que j’installe. Je le lance, au premier démarrage je peux me connecter à un compte Ultimaker. J’ajoute une imprimante non connectée en réseau, je sélectionne le profil de l'Alfawise u30 qui est identique à ma Longer LK4 pro.
+
+Par défaut Cura est en Anglais mais dans les Paramètres il est possible de sélectionner la langue de son choix.
+
+## STL
+
+Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad`)
+
+
+
 <!--
 ███╗   ██╗ █████╗ ██╗   ██╗████████╗██╗██╗     ██╗   ██╗███████╗
 ████╗  ██║██╔══██╗██║   ██║╚══██╔══╝██║██║     ██║   ██║██╔════╝
@@ -369,6 +391,7 @@ le scanner sera alors utilisable via **simplescan**
 * `yay lutris` pour installer :
     * [Uplay](https://lutris.net/games/uplay/) pour installer **Trackmania 2020 Starter**
     * [Magic the gathering arena](https://lutris.net/games/magic-the-gathering-arena/)
+    * --[Starcraft II](https://lutris.net/games/starcraft-ii/) (`pacman -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse nvidia-utils lib32-nvidia-450xx-utils lib32-mesa` et `yay dxvk-winelib` nécessaire au préalable ? Voir [Battle.Net.md](https://github.com/lutris/docs/blob/master/Battle.Net.md) pour plus d’informations)-- via playonlinux ?
 <!--
   ███╗
 ███████╗██████╗ ██╗████████╗███████╗██╗   ██╗██████╗ ███████╗    ██████╗ ███████╗    ████████╗███████╗██╗  ██╗████████╗███████╗
@@ -411,6 +434,13 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 
 
 
+
+
+
+
+
+
+
 # Notes : Chacun ses goûts !
 * J’ai testé **Rawtherapee** et **Darktable**, c’est le second qui m’a le plus convaincu
 * Je suis passé de **Shotwell** à **Digikam** puis de **Digikam** à **Shotwell**, chacun ses goûts, je garde le plus léger
@@ -425,17 +455,16 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 * `yay losslesscut`
 * `yay magicavoxel` en attendant de trouver le libre qui me conviendra
 * dvd ?
-* cura/impression3D ? `yay meshlab`
-* Émulateurs ?
 * bta-3100
 * [rezonator2](https://github.com/orion-project/rezonator2)
-* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
+
 * Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ? ascii ?
-* nano en couleur ?
 * easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp… mais je finis par supprimer ce paquet car les dossiers du bureau s’ouvre avec easytag…
-* `yay turtlesport` / `yay mytourbook`
+Running :
+* `yay mytourbook`
+* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
 * Python : `sudo pacman -S jupyter-notebook spyder`
 
 # À tester ?
