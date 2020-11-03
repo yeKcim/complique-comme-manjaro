@@ -70,8 +70,9 @@ Quelques outils utiles pour le boulot :
 * `sudo pacman -S octave`
 Et éventuellement :
 * [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
-* `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel)
 * `yay zoom`
+Pour le boulot depuis la maison :
+* `sudo pacman -S openvpn icedtea-web`
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -204,7 +205,6 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [Textarea Cache](https://addons.mozilla.org/fr/firefox/addon/textarea-cache/?src=search)
 * [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/?src=search)
 
-
 ## Correcteur grammatical grammalecte
 * `yay libreoffice-extension-grammalecte-fr`
 * [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
@@ -314,6 +314,10 @@ sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5
 ```
 le scanner sera alors utilisable via **simplescan**
 
+## Photocopieur Canon
+Pour le copieur du boulot (partage smb), l’installation n’est pas aussi simple qu’à la maison (en particulier pour renseigner les informations de connexion. Je tente l’installation via __http://localhost:631/admin__ et via le gestionnaire d’imprimantes de Gnome mais ceux-ci ne sont pas assez pratique ou complet. Avec **system-config-printer** l’installation est plus simple.
+
+J'ai ajouté **manjaro-settings-samba** comme paquet pour résoudre un problème d’authentification smb mais l’impression ne fonctionnait toujours pas. Du moins, c’est ce que j’avais écrit au moment de prendre mes notes mais aujourd’hui, je ne rencontre plus aucun problème d’impression mais n’ai aucune note de comment j’ai procédé 🤔.
 
 <!--
 ██╗███╗   ███╗██████╗ ██████╗ ██╗███╗   ███╗ █████╗ ███╗   ██╗████████╗███████╗    ██████╗ ██████╗ 
@@ -333,7 +337,7 @@ Par défaut Cura est en Anglais mais dans les Paramètres il est possible de sé
 
 ## STL
 
-Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad`)
+Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad freecad-assembly3-git`)
 
 
 
@@ -379,6 +383,7 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
 </p>
 
 * `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu vitetris`
+* `yay redeclipse-bin` et `yay anticube2-git`
 * [Shattered Pixel Dungeon](https://pixeldungeon.fandom.com/wiki/Mod-Shattered_Pixel_Dungeon) : `yay shattered-pixel-dungeon`
 * [torus-trooper](http://www.emhsoft.com/ttrooper/) (j’ai tenté d’utiliser aur mais rien n’y fait…) : je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et `sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar`
 * [mrboom](http://mrboom.mumblecore.org/) : `yay mrboom` (reste à l’ajouter dans steam pour l’utiliser à la manette…)
@@ -388,10 +393,14 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
 	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 * Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce`
 * Le client gog : `yay minigalaxy` ? ou le client officiel (je ne retrouve pas le mail de la beta fermé de gog 2) ?
+* Le client itch.io : `yay itch`
 * `yay lutris` pour installer :
     * [Uplay](https://lutris.net/games/uplay/) pour installer **Trackmania 2020 Starter**
     * [Magic the gathering arena](https://lutris.net/games/magic-the-gathering-arena/)
     * --[Starcraft II](https://lutris.net/games/starcraft-ii/) (`pacman -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse nvidia-utils lib32-nvidia-450xx-utils lib32-mesa` et `yay dxvk-winelib` nécessaire au préalable ? Voir [Battle.Net.md](https://github.com/lutris/docs/blob/master/Battle.Net.md) pour plus d’informations)-- via playonlinux ?
+* Pour le jeu [pypacman](https://github.com/usawa/pypacman), j’installe pygame `pacman -S python-pygame`
+* Émulateurs ?
+
 <!--
   ███╗
 ███████╗██████╗ ██╗████████╗███████╗██╗   ██╗██████╗ ███████╗    ██████╗ ███████╗    ████████╗███████╗██╗  ██╗████████╗███████╗
@@ -432,21 +441,43 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 
 * ???????? `pacman -S vim-grammalecte vim-spell-fr` ?????????
 
+<!--
+ ██████╗██╗  ██╗██╗███████╗███████╗██████╗ ███████╗███╗   ███╗███████╗███╗   ██╗████████╗
+██╔════╝██║  ██║██║██╔════╝██╔════╝██╔══██╗██╔════╝████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
+██║     ███████║██║█████╗  █████╗  ██████╔╝█████╗  ██╔████╔██║█████╗  ██╔██╗ ██║   ██║   
+██║     ██╔══██║██║██╔══╝  ██╔══╝  ██╔══██╗██╔══╝  ██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   
+╚██████╗██║  ██║██║██║     ██║     ██║  ██║███████╗██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   
+ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝     ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   
+ -->                                                                                      
+# Chiffrement avec Luks
+[source](https://doc.ubuntu-fr.org/cryptsetup)
+J'ai chiffré le disque /home à l'installation. Je dois ajouter une clé de déchiffrement pour mon employeur, je le fais via : `sudo cryptsetup luksAddKey /dev/sda7`
+Pour voir l'état du conteneur chiffré et les "slots" utilisés : `sudo cryptsetup luksDump /dev/hda7`
+Pour révoquer une clé : `sudo cryptsetup luksKillSlot /dev/sda7 <numero_de_slot>`
 
+Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 
-
-
-
-
-
-
-
+<!--
+███╗   ██╗ ██████╗ ████████╗███████╗███████╗
+████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝
+██╔██╗ ██║██║   ██║   ██║   █████╗  ███████╗
+██║╚██╗██║██║   ██║   ██║   ██╔══╝  ╚════██║
+██║ ╚████║╚██████╔╝   ██║   ███████╗███████║
+╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝
+-->
 # Notes : Chacun ses goûts !
 * J’ai testé **Rawtherapee** et **Darktable**, c’est le second qui m’a le plus convaincu
 * Je suis passé de **Shotwell** à **Digikam** puis de **Digikam** à **Shotwell**, chacun ses goûts, je garde le plus léger
 * J’aurais aimé tester **nautilus-ext-git** mais il ne semble pas fonctionner sur mon poste, je lui préfère donc **rabbitvcs-nautilus**
 
-
+<!--
+████████╗ ██████╗ ██████╗  ██████╗ 
+╚══██╔══╝██╔═══██╗██╔══██╗██╔═══██╗
+   ██║   ██║   ██║██║  ██║██║   ██║
+   ██║   ██║   ██║██║  ██║██║   ██║
+   ██║   ╚██████╔╝██████╔╝╚██████╔╝
+   ╚═╝    ╚═════╝ ╚═════╝  ╚═════╝ 
+-->
 # Reste à voir :
 * aur dans pacman ?
 * Nettoyage cache yay
@@ -478,9 +509,9 @@ Running :
 * minetest ?
 * siril
 
-## Jeux :  
-```
-yay redeclipse-bin
-yay anticube2-git
-```
-* Émulateurs ?
+
+
+Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC.
+
+J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
+
