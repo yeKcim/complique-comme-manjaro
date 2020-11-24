@@ -187,6 +187,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 ## Inkscape
 * Extensions Inkscape : `yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
+* Dans Préférences (Maj+Ctrl+P) → Interface → Raccourcis clavier : Je ne trouve pas l’entrée ???
 
 ## Gimp
 * `yay python2-gimp` et `yay gimp-plugin-resynthesizer` pour avoir **heal selection** (Filtre → Amélioration → Corriger la sélection)
@@ -400,6 +401,7 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
     * --[Starcraft II](https://lutris.net/games/starcraft-ii/) (`pacman -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse nvidia-utils lib32-nvidia-450xx-utils lib32-mesa` et `yay dxvk-winelib` nécessaire au préalable ? Voir [Battle.Net.md](https://github.com/lutris/docs/blob/master/Battle.Net.md) pour plus d’informations)-- via playonlinux ?
 * Pour le jeu [pypacman](https://github.com/usawa/pypacman), j’installe pygame `pacman -S python-pygame`
 * Émulateurs ?
+* `yay solarus` ????????
 
 <!--
   ███╗
@@ -452,7 +454,7 @@ Ce fichier de configuration vérifie que le gestionnaire de plugin est installé
 # Chiffrement avec Luks
 [source](https://doc.ubuntu-fr.org/cryptsetup)
 J'ai chiffré le disque /home à l'installation. Je dois ajouter une clé de déchiffrement pour mon employeur, je le fais via : `sudo cryptsetup luksAddKey /dev/sda7`
-Pour voir l'état du conteneur chiffré et les "slots" utilisés : `sudo cryptsetup luksDump /dev/hda7`
+Pour voir l'état du conteneur chiffré et les "slots" utilisés : `sudo cryptsetup luksDump /dev/sda7`
 Pour révoquer une clé : `sudo cryptsetup luksKillSlot /dev/sda7 <numero_de_slot>`
 
 Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
@@ -508,10 +510,22 @@ Running :
 * virtualbox{,-guest-utils,-guest-iso} ?
 * minetest ?
 * siril
+* `yay alacritty-git` (https://ostechnix.com/alacritty-a-lightweight-and-blazingly-fast-terminal-emulator/) je l’ai installé, plus qu’à tester…
 
 
 
-Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC.
+Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
 
-J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
 
+
+
+
+
+
+# bluetooth
+
+Mon dongle https://wiki.archlinux.org/index.php/bluetooth#CSR_Dongle_0a12:0001
+Je passe du noyau 5.4 à 5.9
+https://www.reddit.com/r/archlinux/comments/e31n5v/where_can_i_find_the_patch_for_cambridge_silicon/
+https://bbs.archlinux.org/viewtopic.php?id=257372
+https://gist.github.com/nevack/6b36b82d715dc025163d9e9124840a07
