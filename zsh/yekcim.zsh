@@ -33,6 +33,10 @@ alias SAVE="rsync -avzz --delete --exclude-from=/mnt/data/.rsync_exclude.txt --n
 alias freetv="vlc http://mafreebox.freebox.fr/freeboxtv/playlist.m3u" # freebox tv
 alias youtube-dl='youtube-dl --prefer-ffmpeg -f bestvideo+bestaudio' # youtube-dl
 
+###### Adminsys ######
+alias s="sudo systemctl"
+alias j="journalctl -f"
+
 ##### Depuis manjaro-zsh-config ######
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
