@@ -174,6 +174,8 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [Voir le nom complet des applications dans le menu](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
 * [Calendar Improved](https://extensions.gnome.org/extension/2386/calendar-improved/)
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
+* [Compiz alike windows effect](https://extensions.gnome.org/extension/2950/compiz-alike-windows-effect/)
+* [Coverflow Alt-Tab](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
 * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 * [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
 * [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
@@ -185,6 +187,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [Unite](https://extensions.gnome.org/extension/1287/unite/)
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
+
 
 ## Inkscape
 * Extensions Inkscape : `yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
