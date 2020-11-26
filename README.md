@@ -54,7 +54,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 -->
 # AUR
 * Quelques paquets supplémentaires :
-	* [cht.sh](http://cht.sh/) : `yay cht.sh`
+	* [cht.sh](http://cht.sh/) : `yay cht.sh-git`
 	* [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
 	* livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 * Polices
@@ -73,6 +73,7 @@ Et éventuellement :
 * `yay zoom`
 Pour le boulot depuis la maison :
 * `sudo pacman -S openvpn icedtea-web`
+
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -213,6 +214,10 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 	
 ## Blender
 * `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
+* `yay --editmenu -S optix`
+	* Je télécharge NVIDIA-OptiX depuis https://developer.nvidia.com/designworks/optix/download à placer dans ~/.cache/yay/optix/
+	* J’édite le numéro de version (7.2.0 et le sha5sum)
+	* OptiX est alors disponible dans les propositions de denoising, toutefois, il fait planté mon blender… (à voir plus tard)
 
 <!--
 ██████╗ ███████╗██████╗ ███████╗ ██████╗        ██╗██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗ 
@@ -503,7 +508,7 @@ Running :
 # À tester ?
 * `yay openpose`
 * `yay untrunc` pour réparer les mp4 ?
-* gitqlient
+* gitqlient / gitg
 * tmux
 * autojump ?
 * yay torbrowser-launcher
