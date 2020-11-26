@@ -519,7 +519,7 @@ Running :
 * minetest ?
 * siril
 * `yay alacritty-git` (https://ostechnix.com/alacritty-a-lightweight-and-blazingly-fast-terminal-emulator/) je l’ai installé, plus qu’à tester…
-
+* https://github.com/romkatv/powerlevel10k 
 
 
 Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
@@ -530,7 +530,7 @@ Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obli
 
 
 
-# bluetooth
+# bluetooth ?
 
 Mon dongle https://wiki.archlinux.org/index.php/bluetooth#CSR_Dongle_0a12:0001
 Je passe du noyau 5.4 à 5.9
