@@ -14,7 +14,9 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 ██║     ██║  ██║╚██████╔╝╚██████╔╝███████╗   ██║   ███████║
 ╚═╝     ╚═╝  ╚═╝ ╚══▀▀═╝  ╚═════╝ ╚══════╝   ╚═╝   ╚══════╝
 -->
+
 # Paquets
+
 ```
 sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape darktable openscad owncloud-client \
 celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting playonlinux\
@@ -29,20 +31,21 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 ```
 
 # Memo gestion des paquets
+
 * Pacman
-	* Optimisation des miroirs : `sudo pacman-mirrors --fasttrack` ([source](https://itsfoss.com/things-to-do-after-installing-manjaro/))
-	* Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
-	* update : `sudo pacman -Sy`
-	* upgrade : `sudo pacman -Syu`
-	* nettoyer le cache : `sudo pacman -Scc`
-	* chercher un paquet `pacman -Ss nomdepaquet`
+  * Optimisation des miroirs : `sudo pacman-mirrors --fasttrack` ([source](https://itsfoss.com/things-to-do-after-installing-manjaro/))
+  * Avant de lancer une mise à jour, consulter https://forum.manjaro.org/c/announcements/stable-updates
+  * update : `sudo pacman -Sy`
+  * upgrade : `sudo pacman -Syu`
+  * nettoyer le cache : `sudo pacman -Scc`
+  * chercher un paquet `pacman -Ss nomdepaquet`
 * Yay
-	* informations de maj : `yay -Pua`
-	* upgrade : `yay -Sua`
-	* supprimer les dépendances non nécessaires : `yay -Yc`
-	* quelques stats : `yay -Ps`
-	* remove : `yay -R nomdepaquet`
-	* installation avec modification `yay --editmenu -S nomdepaquet`
+  * informations de maj : `yay -Pua`
+  * upgrade : `yay -Sua`
+  * supprimer les dépendances non nécessaires : `yay -Yc`
+  * quelques stats : `yay -Ps`
+  * remove : `yay -R nomdepaquet`
+  * installation avec modification `yay --editmenu -S nomdepaquet`
 
 <!--
  █████╗ ██╗   ██╗██████╗ 
@@ -52,28 +55,41 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 ██║  ██║╚██████╔╝██║  ██║
 ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝
 -->
-# AUR
-* Quelques paquets supplémentaires :
-	* [cht.sh](http://cht.sh/) : `yay cht.sh-git`
-	* [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
-	* livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
-* Polices
-	* Pour avoir la police Sawasdee : `yay ttf-tlwg`
-	* Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
-	* Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
-* Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
-* `yay marktext` (À l’air sympa mais ne s’installe pas pour l’instant)
 
-Quelques outils utiles pour le boulot :
+# AUR
+
+* Quelques paquets supplémentaires :
+  * [cht.sh](http://cht.sh/) : `yay cht.sh-git`
+  * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
+  * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
+* Polices
+  * Pour avoir la police Sawasdee : `yay ttf-tlwg`
+  * Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
+  * Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
+* Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
+* `yay marktext` (plein de fonctionnalités sympa)
+
+<!--
+██████╗  ██████╗ ██╗   ██╗██████╗     ██╗     ███████╗    ██████╗  ██████╗ ██╗   ██╗██╗      ██████╗ ████████╗
+██╔══██╗██╔═══██╗██║   ██║██╔══██╗    ██║     ██╔════╝    ██╔══██╗██╔═══██╗██║   ██║██║     ██╔═══██╗╚══██╔══╝
+██████╔╝██║   ██║██║   ██║██████╔╝    ██║     █████╗      ██████╔╝██║   ██║██║   ██║██║     ██║   ██║   ██║   
+██╔═══╝ ██║   ██║██║   ██║██╔══██╗    ██║     ██╔══╝      ██╔══██╗██║   ██║██║   ██║██║     ██║   ██║   ██║   
+██║     ╚██████╔╝╚██████╔╝██║  ██║    ███████╗███████╗    ██████╔╝╚██████╔╝╚██████╔╝███████╗╚██████╔╝   ██║   
+╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚══════╝    ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝ ╚═════╝    ╚═╝   
+-->
+
+# Pour le boulot
+
+Quelques outils supplémentaires pour le boulot :
+
 * `yay scidavis`
 * `yay alphaplot`
 * `sudo pacman -S octave`
-Et éventuellement :
+  Et éventuellement :
 * [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
 * `yay zoom`
-Pour le boulot depuis la maison :
-* `sudo pacman -S openvpn icedtea-web`
-
+* Pour streamer : `sudo pacman -S obs-studio`
+* (pour le télétravail : `sudo pacman -S openvpn icedtea-web` mais ça ne fonctionne pas)
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -83,8 +99,11 @@ Pour le boulot depuis la maison :
 ███████║███████║██║  ██║
 ╚══════╝╚══════╝╚═╝  ╚═╝
 -->
+
 # ssh
+
 [source](https://wiki.archlinux.fr/ssh)
+
 * Configurer ssh : `sudo nano /etc/ssh/sshd_config`
 * Lancer ssh : `sudo systemctl start sshd.service`
 * Lancer au démarrage : `sudo systemctl enable sshd.service`
@@ -99,23 +118,27 @@ Pour le boulot depuis la maison :
 ██║     ██║  ██║██║  ██║   ██║   ██║   ██║   ██║╚██████╔╝██║ ╚████║    ██████╔╝██║  ██║   ██║   ██║  ██║
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═
 -->
+
 # Partition data séparée
+
 Comme j’ai ajouté le disque après l’installation je dois ajouter manuellement les informations dans fstab, le fichier permettant de configurer les partitions qui seront montées au démarrage. Pour savoir quoi écrire, il est nécessaire, dans un premier temps,de relever l’UUID du disque
 `blkid`
 On pourra alors renseigner fstab :
 `nano /etc/fstab`
 En ajoutant une ligne ressemblant à :
 **/dev/sdb: LABEL="newhome" UUID="3c10ccb9-e438-4c73-aebc-7d5456a4d5ef" TYPE="ext4"**
+
 ```
 UUID="3c10ccb9-e438-4c73-aebc-7d5456a4d5ef" /mnt/data/ ext4 defaults 0 2
 ```
+
 Par défaut, les dossiers Téléchargement, Bureau, Musique,… sont dans ~. Dans mon cas, il est nécessaire de les déplacer dans /mnt/data. Pour cela, il suffit de remplacer $HOME dans le fichier de configuration :
 `gedit $HOME/.config/user-dirs.dirs`
 Un chmod et chown récursifs sont ensuite nécessaires pour que le dossier soit accessible pour l’utilisateur.
 
 # SSD
-Si la partition root est installée sur un SSD, activer TRIM : `sudo systemctl enable fstrim.timer` ([source](https://itsfoss.com/things-to-do-after-installing-manjaro/))
 
+Si la partition root est installée sur un SSD, activer TRIM : `sudo systemctl enable fstrim.timer` ([source](https://itsfoss.com/things-to-do-after-installing-manjaro/))
 
 <!--
  ██████╗ ███████╗███████╗████████╗    ██████╗  █████╗ ██████╗  █████╗ ███╗   ███╗
@@ -125,12 +148,15 @@ Si la partition root est installée sur un SSD, activer TRIM : `sudo systemctl e
 ╚██████╔╝███████╗███████║   ██║██╗    ██║     ██║  ██║██║  ██║██║  ██║██║ ╚═╝ ██║
  ╚═════╝ ╚══════╝╚══════╝   ╚═╝╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
 -->
+
 # Gestionaire de paramètres Manjaro
+
 Dans le **Gestionnaire de paramètres Manjaro** : je peux
+
 * mettre à jour le noyau
 * installer les paquets linguistiques
 * installer les pilotes de ma carte graphique
-ce que je fais.
+  ce que je fais.
 
 <!--
 ██████╗ ███████╗██████╗ ███████╗ ██████╗         ██████╗ ███╗   ██╗ ██████╗ ███╗   ███╗███████╗
@@ -140,25 +166,28 @@ ce que je fais.
 ██║     ███████╗██║  ██║███████║╚██████╔╝██╗    ╚██████╔╝██║ ╚████║╚██████╔╝██║ ╚═╝ ██║███████╗
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
 -->
+
 # Personnalisations de Gnome
 
 ## Ajustements (Gnome-tweaks),
+
 * __Apparence__ je change
-	* le thème d’applications pour **Arc-Darker**
-	* le set d’icônes pour **Adwaita**, qui ne pose pas de problème dans Inkscape (entre autres) et me semble plus lisible
-	* le thème shell pour **Arc-Dark**
+  * le thème d’applications pour **Arc-Darker**
+  * le set d’icônes pour **Adwaita**, qui ne pose pas de problème dans Inkscape (entre autres) et me semble plus lisible
+  * le thème shell pour **Arc-Dark**
 * __Barre de titre des fenêtres__ Le clic milieu sur la barre de titre fait l’action Lower
 * __Fenêtres__ je désactive les dialogues modaux
 * __Polices__ je modifie le Facteur de mise à l’échelle pour 0,8 ou 0,9 selon mon écran
 * __Applications au démarrage__ j’ajoute ici pavucontrol (mais comment ?)
 
 ## Paramètres
+
 * Je configure mes **comptes en ligne** (Google, Nextcloud,…).
 * Dans **Partage** j’active le **Partage de médias** pour activer le partage upnp
 
 ## Layouts
-Je choisi la disposition Modern et dans les paramètres je coche l’option **Desktop icons**.
 
+Je choisi la disposition Modern et dans les paramètres je coche l’option **Desktop icons**.
 
 <!--
 ███████╗██╗  ██╗████████╗███████╗███╗   ██╗███████╗██╗ ██████╗ ███╗   ██╗███████╗
@@ -168,9 +197,11 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 ███████╗██╔╝ ██╗   ██║   ███████╗██║ ╚████║███████║██║╚██████╔╝██║ ╚████║███████║
 ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 -->
+
 # Extensions
 
 ## Gnome-shell
+
 * [Voir le nom complet des applications dans le menu](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
 * [Calendar Improved](https://extensions.gnome.org/extension/2386/calendar-improved/)
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
@@ -188,19 +219,22 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
 
-
 ## Inkscape
+
 * Extensions Inkscape : `yay textext` (j'installe **libxml2** et **python2-lxml** pour cette extension, il serait plus malin que le paquet aur soit mieux configuré)
 * Dans Préférences (Maj+Ctrl+P) → Interface → Raccourcis clavier : Je ne trouve pas l’entrée ???
 
 ## Gimp
+
 * `yay python2-gimp` et `yay gimp-plugin-resynthesizer` pour avoir **heal selection** (Filtre → Amélioration → Corriger la sélection)
 
 ## Thunderbird
+
 * [Thunderbird Conversations](https://addons.thunderbird.net/fr/thunderbird/addon/gmail-conversation-view/)
 * [gContactSync](https://addons.thunderbird.net/fr/thunderbird/addon/gcontactsync/?src=userprofile)
 
 ## Firefox
+
 * [Cozy - Cloud personnel](https://addons.mozilla.org/fr/firefox/addon/cozy-personal-cloud/)
 * [Dark Reader](https://addons.mozilla.org/fr/firefox/addon/darkreader/)
 * [GSConnect](https://addons.mozilla.org/fr/firefox/addon/gsconnect/)
@@ -211,16 +245,18 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/?src=search)
 
 ## Correcteur grammatical grammalecte
+
 * `yay libreoffice-extension-grammalecte-fr`
 * [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
 * [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
-	
+
 ## Blender
+
 * `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
 * `yay --editmenu -S optix`
-	* Je télécharge NVIDIA-OptiX depuis https://developer.nvidia.com/designworks/optix/download à placer dans ~/.cache/yay/optix/
-	* J’édite le numéro de version (7.2.0 et le sha5sum)
-	* OptiX est alors disponible dans les propositions de denoising, toutefois, il fait planté mon blender… (à voir plus tard)
+  * Je télécharge NVIDIA-OptiX depuis https://developer.nvidia.com/designworks/optix/download à placer dans ~/.cache/yay/optix/
+  * J’édite le numéro de version (7.2.0 et le sha5sum)
+  * OptiX est alors disponible dans les propositions de denoising, toutefois, il fait planté mon blender… (à voir plus tard)
 
 <!--
 ██████╗ ███████╗██████╗ ███████╗ ██████╗        ██╗██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗ 
@@ -230,11 +266,11 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 ██║     ███████╗██║  ██║███████║╚██████╔╝██╗██╔╝   ██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝╚═╝    ╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝ 
 -->
+
 # Personnalisations/Debug
 
 * Remettre les icônes dans les menus (gimp, inkscape,…) : C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) il suffit de taper : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"` ([Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199))
 * Problème des ligatures grasses disgracieuses : `printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
-
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -244,6 +280,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 ███████╗███████║██║  ██║
 ╚══════╝╚══════╝╚═╝  ╚═╝
 -->
+
 # zsh
 
 <p align="center">
@@ -253,12 +290,15 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * Installation de Oh-My-ZSH : `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
 ## Personnalisation
+
 * Je choisis parmi les [thèmes disponibles](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), le thème [agnoster](https://github.com/agnoster/agnoster-zsh-theme), je l’indiquerai donc dans mon fichier de configuration personnel
 * J’active mes [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) préférés. Pour cela j'ajoute dans mon zshrc, via `nano $HOME/.zshrc` : `plugins=(archlinux common-aliases colored-man-pages colorize copydir copyfile cp extract git extract git rsync taskwarrior thefuck)`
 * Mon fichier de configuration : `curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh/yekcim.zsh -o $HOME/.oh-my-zsh/custom/yekcim.zsh`
 
 ## Bug de démarrage de Tilix
+
 `nano  ~/.zshrc` pour ajouter :
+
 ```
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
@@ -266,11 +306,14 @@ fi
 ```
 
 ## Pour root… (il faudra trouver mieux)
+
 Comme mon poste est mono-utilisateur je me permettre [un truc crade](https://askubuntu.com/questions/521469/oh-my-zsh-for-the-root-and-for-all-user) pour avoir ohmyzsh après un `sudo -s` :
+
 ```
 sudo ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
 sudo ln -s $HOME/.zshrc /root/.zshrc
 ```
+
 j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dans ~/.zshrc pour éviter le message d’erreur « Insecure completion-dependent directories detected »
 
 <!--      ███╗
@@ -281,6 +324,7 @@ j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dan
 ██████╔╝███████╗██║     ╚██████╔╝
 ╚═════╝ ╚══════╝╚═╝      ╚═════╝ 
 -->
+
 # Bépo
 
 <p align="center">
@@ -290,14 +334,16 @@ j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dan
 * Pour que les applications GTK prennent en compte toutes les fonctionnalités du bépo : `printf "\n\nGTK_IM_MODULE=xim" >> $HOME/.zshenv` [pour bug](https://bugs.launchpad.net/inkscape/+bug/1741283). Reste le [problème du tampon + Maj](https://bugs.launchpad.net/inkscape/+bug/1323080)
 * Dans **Ajustements → Clavier et souris** : J'active **Compose** (**Super droit** pour mon Ergodox et **Menu** sur mon TypeMatrix)
 * Pour que bépo soit pris en compte dans tty :
-`nano /etc/default/keyboard`
+  `nano /etc/default/keyboard`
+  
 ```
-XKBMODEL="pc105"
-XKBLAYOUT="fr"
-XKBVARIANT="bepo_afnor"
-XKBOPTIONS="lv3:ralt_switch"
+  XKBMODEL="pc105"
+  XKBLAYOUT="fr"
+  XKBVARIANT="bepo_afnor"
+  XKBOPTIONS="lv3:ralt_switch"
 
-BACKSPACE="guess" 
+  BACKSPACE="guess" 
+
 ```
 ne semble pas suffire mais mettre la valeur fr-bepo dans la variable KEYMAP `sudo nano /etc/vconsole.conf` résout le problème [source](https://wiki.archlinux.fr/dvorak)
 * Comment faire pour que GDM soit en bépo par défaut ?
@@ -314,12 +360,14 @@ ne semble pas suffire mais mettre la valeur fr-bepo dans la variable KEYMAP `sud
 Pour mon imprimante Brother MFC-J4620DW :
 ## Impression
 * `yay MFC-J4620DW` l’imprimante pourra alors être installée :
-	* Dans l’[administration de cups](http://localhost:631/admin)
-	* J’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** en lui indiquant le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
+    * Dans l’[administration de cups](http://localhost:631/admin)
+    * J’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** en lui indiquant le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
 ## Scanner
 ```
+
 yay brscan4
 sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5
+
 ```
 le scanner sera alors utilisable via **simplescan**
 
@@ -365,15 +413,15 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
 </p>
 
 * Dans les préférences de Nautilus :
-	* Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
-	* Onglet __Comportement__, l'action d'ouverture sur Simple clic
+    * Onglet __Vue__, je choisi d’afficher la taille en première information libellé de la vue en icônes.
+    * Onglet __Comportement__, l'action d'ouverture sur Simple clic
 * Pour intégrer meld : `yay nautilus-compare`
 * Pour intégrer git : `yay rabbitvcs-nautilus`
 * [Mes scripts Nautilus](https://github.com/yeKcim/my_nautilus_scripts) :
-	* Pour ma machine `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`
-	* Sur les machines qui n’ont pas ma clé `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
-	* `yay pdfposter`
-	* manque **lptools libav-tools(ffmpeg) cups-client**
+    * Pour ma machine `git clone git@github.com:yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`
+    * Sur les machines qui n’ont pas ma clé `git clone https://github.com/yeKcim/my_nautilus_scripts.git $HOME/.local/share/nautilus/scripts`)
+    * `yay pdfposter`
+    * manque **lptools libav-tools(ffmpeg) cups-client**
 * J’ajoute un marque-page vers **ftp://freebox@mafreebox.free.fr**
 
 <!--
@@ -398,8 +446,8 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
 * [mrboom](http://mrboom.mumblecore.org/) : `yay mrboom` (reste à l’ajouter dans steam pour l’utiliser à la manette…)
 * OpenSC2K ? lincity ? openttd ? ou autre ? en tout cas il serait intéressant d’avoir une jeu de gestion
 * Steam
-	* J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
-	* Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
+    * J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
+    * Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 * Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce`
 * Le client gog : `yay minigalaxy` ? ou le client officiel (je ne retrouve pas le mail de la beta fermé de gog 2) ?
 * Le client itch.io : `yay itch`
@@ -430,18 +478,19 @@ J’utilise régulièrement gedit et nano lorsque je suis en console. J’essaye
 
 Mes fichiers de configuration de nano permettent d’ajouter la coloration syntaxique et d’avoir une interface rouge pour root et bleu pour l’utilisateur
 ```
+
 mkdir $HOME/.config/nano/
 curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/nanorc -o $HOME/.config/nano/nanorc
 sudo curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/nano/root.nanorc -o /root/.nanorc
-```
 
+```
 ## gedit
 Dans les préférences de Gedit :
 * Affichage : je coche 
-	* **Afficher les numéros de ligne**
-	* **Afficher la carte de la vue d’ensemble**
-	* **surligner la ligne actuelle**
-	* **Surligner les parenthèses correspondantes**
+    * **Afficher les numéros de ligne**
+    * **Afficher la carte de la vue d’ensemble**
+    * **surligner la ligne actuelle**
+    * **Surligner les parenthèses correspondantes**
 * Police et couleurs : Je coche **Utiliser la police système à chasse fixe (Hack 11)** et choisi le jeu de couleur **Solarisé foncé** 
 
 ## vim
@@ -498,7 +547,6 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * dvd ?
 * bta-3100
 * [rezonator2](https://github.com/orion-project/rezonator2)
-
 * Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ? ascii ?
@@ -506,7 +554,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 Running :
 * `yay mytourbook`
 * [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
-* Python : `sudo pacman -S jupyter-notebook spyder`
+* Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels`
 
 # À tester ?
 * `yay openpose`
@@ -524,12 +572,6 @@ Running :
 
 Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
 
-
-
-
-
-
-
 # bluetooth ?
 
 Mon dongle https://wiki.archlinux.org/index.php/bluetooth#CSR_Dongle_0a12:0001
@@ -537,3 +579,4 @@ Je passe du noyau 5.4 à 5.9
 https://www.reddit.com/r/archlinux/comments/e31n5v/where_can_i_find_the_patch_for_cambridge_silicon/
 https://bbs.archlinux.org/viewtopic.php?id=257372
 https://gist.github.com/nevack/6b36b82d715dc025163d9e9124840a07
+```
