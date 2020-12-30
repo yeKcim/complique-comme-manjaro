@@ -61,6 +61,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 * Quelques paquets supplémentaires :
   * [cht.sh](http://cht.sh/) : `yay cht.sh-git`
   * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
+  * [mkvtoolnix](https://mkvtoolnix.download/) : `yay mkvtoolnix-gui` permet d’éditer les metadatas de vidéos sans réencoder
   * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 * Polices
   * Pour avoir la police Sawasdee : `yay ttf-tlwg`
@@ -550,10 +551,9 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ? ascii ?
-* easytag pour les vidéos car ce sont les titres metadata qui sont pris en compte par le partage upnp… mais je finis par supprimer ce paquet car les dossiers du bureau s’ouvre avec easytag…
-Running :
-* `yay mytourbook`
-* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
+* Running :
+	* `yay mytourbook`
+	* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
 * Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels`
 
 # À tester ?
