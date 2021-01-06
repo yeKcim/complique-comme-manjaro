@@ -27,7 +27,7 @@ yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan g
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek
 ```
 
 # Memo gestion des paquets
