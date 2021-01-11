@@ -38,7 +38,8 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
   * update : `sudo pacman -Sy`
   * upgrade : `sudo pacman -Syu`
   * nettoyer le cache : `sudo pacman -Scc`
-  * chercher un paquet `pacman -Ss nomdepaquet`
+  * chercher un paquet : `pacman -Ss nomdepaquet`
+  * supprimer un paquet : `pacman -R nomdepaquet`
 * Yay
   * informations de maj : `yay -Pua`
   * upgrade : `yay -Sua`
@@ -46,6 +47,8 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
   * quelques stats : `yay -Ps`
   * remove : `yay -R nomdepaquet`
   * installation avec modification `yay --editmenu -S nomdepaquet`
+  
+* Pour avoir pacman et yay en couleur : `nano /etc/pacman.conf` pour décommenter **Color** dans la section **Misc options**
 
 <!--
  █████╗ ██╗   ██╗██████╗ 
