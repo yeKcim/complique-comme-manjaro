@@ -92,6 +92,7 @@ Quelques outils supplémentaires pour le boulot :
   Et éventuellement :
 * [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
 * `yay zoom`
+* `yay teams microsoft`
 * Pour streamer : `sudo pacman -S obs-studio`
 * (pour le télétravail : `sudo pacman -S openvpn icedtea-web` mais ça ne fonctionne pas)
 
@@ -459,9 +460,11 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
     * [Uplay](https://lutris.net/games/uplay/) pour installer **Trackmania 2020 Starter**
     * [Magic the gathering arena](https://lutris.net/games/magic-the-gathering-arena/)
     * --[Starcraft II](https://lutris.net/games/starcraft-ii/) (`pacman -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse nvidia-utils lib32-nvidia-450xx-utils lib32-mesa` et `yay dxvk-winelib` nécessaire au préalable ? Voir [Battle.Net.md](https://github.com/lutris/docs/blob/master/Battle.Net.md) pour plus d’informations)-- via playonlinux ?
+* `yay heroic-games-launcher-bin` pour les jeux epic
 * Pour le jeu [pypacman](https://github.com/usawa/pypacman), j’installe pygame `pacman -S python-pygame`
 * Émulateurs ?
 * `yay solarus` ????????
+* `yay minetest-mineclone2` et `pacman -S minetest` pour lancer des serveurs pour mes enfants
 
 <!--
   ███╗
@@ -571,9 +574,11 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * siril
 * `yay alacritty-git` (https://ostechnix.com/alacritty-a-lightweight-and-blazingly-fast-terminal-emulator/) je l’ai installé, plus qu’à tester…
 * https://github.com/romkatv/powerlevel10k 
-
+* J’ai installé `xorg-fonts-100dpi` pour ajouter quelques polices mais celle que je cherchais n’y est pas
+* yay plots (pour des tracés sympas)
 
 Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
+
 
 # bluetooth ?
 
