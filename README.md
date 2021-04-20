@@ -63,7 +63,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 
 * Quelques paquets supplémentaires :
   * [cht.sh](http://cht.sh/) : `yay cht.sh-git`
-  * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2`
+  * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2` → Préférer pyload (`pip install --pre pyload-ng`) ou Xtreme Download Manager ?
   * [mkvtoolnix](https://mkvtoolnix.download/) : `yay mkvtoolnix-gui` permet d’éditer les metadatas de vidéos sans réencoder
   * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 * Polices
@@ -439,32 +439,45 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
 -->
 # Jeux
 
+## Divers jeux
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vitetris.png">
-  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/steam.jpg">
 </p>
 
-* `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu vitetris`
-* `yay redeclipse-bin` et `yay anticube2-git`
+* `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu extremetuxracer 0ad`
+* `yay redeclipse-bin` et `yay anticube2-git && yay tesseract-game`
 * [Shattered Pixel Dungeon](https://pixeldungeon.fandom.com/wiki/Mod-Shattered_Pixel_Dungeon) : `yay shattered-pixel-dungeon`
 * [torus-trooper](http://www.emhsoft.com/ttrooper/) (j’ai tenté d’utiliser aur mais rien n’y fait…) : je télécharge le [pkg.tar](https://drive.google.com/file/d/1dvgE4VjyKtXiYrDh2sitE55mRwkZobmL/edit) et `sudo pacman -U torus-trooper-0.22-10-x86_64.pkg.tar`
-* [mrboom](http://mrboom.mumblecore.org/) : `yay mrboom` (reste à l’ajouter dans steam pour l’utiliser à la manette…)
-* OpenSC2K ? lincity ? openttd ? ou autre ? en tout cas il serait intéressant d’avoir une jeu de gestion
+* Pour le jeu [pypacman](https://github.com/usawa/pypacman), j’installe pygame `pacman -S python-pygame`
+Essai voxel :
+* `pacman -S minetest`, installer le mod **mineclone**, pour lancer le serveur pour mes enfants : `minetest --server --worldname world1`
+* `yay veloren`
+
+## Dans le terminal
+* Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce` mais franchement c’est chaud…
+* `pacman -S vitetris` (tetris solo ou multi, jouable en réseau local)
+
+## Plateformes / Installateurs
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/steam.jpg">
+</p>
 * Steam
     * J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
     * Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
-* Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce`
-* Le client gog : `yay minigalaxy` ? ou le client officiel (je ne retrouve pas le mail de la beta fermé de gog 2) ?
-* Le client itch.io : `yay itch`
+* `yay heroic-games-launcher-bin` pour les jeux epic
 * `yay lutris` pour installer :
     * [Uplay](https://lutris.net/games/uplay/) pour installer **Trackmania 2020 Starter**
     * [Magic the gathering arena](https://lutris.net/games/magic-the-gathering-arena/)
-    * --[Starcraft II](https://lutris.net/games/starcraft-ii/) (`pacman -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse nvidia-utils lib32-nvidia-450xx-utils lib32-mesa` et `yay dxvk-winelib` nécessaire au préalable ? Voir [Battle.Net.md](https://github.com/lutris/docs/blob/master/Battle.Net.md) pour plus d’informations)-- via playonlinux ?
-* `yay heroic-games-launcher-bin` pour les jeux epic
-* Pour le jeu [pypacman](https://github.com/usawa/pypacman), j’installe pygame `pacman -S python-pygame`
+* Le client gog : `yay minigalaxy` ? ou le client officiel (je ne retrouve pas le mail de la beta fermé de gog 2) ?
+* Le client itch.io : `yay itch`
+
+## Reste à voir
+* OpenSC2K ? lincity ? openttd ? ou autre ? en tout cas il serait intéressant d’avoir une jeu de gestion
 * Émulateurs ?
 * `yay solarus` ????????
-* `yay minetest-mineclone2` et `pacman -S minetest` pour lancer des serveurs pour mes enfants
+* dans lutris ? * --[Starcraft II](https://lutris.net/games/starcraft-ii/) (`pacman -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-sqlite lib32-libpulse nvidia-utils lib32-nvidia-450xx-utils lib32-mesa` et `yay dxvk-winelib` nécessaire au préalable ? Voir [Battle.Net.md](https://github.com/lutris/docs/blob/master/Battle.Net.md) pour plus d’informations)-- via playonlinux ?
 
 <!--
   ███╗
@@ -570,7 +583,6 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * autojump ?
 * yay torbrowser-launcher
 * virtualbox{,-guest-utils,-guest-iso} ?
-* minetest ?
 * siril
 * `yay alacritty-git` (https://ostechnix.com/alacritty-a-lightweight-and-blazingly-fast-terminal-emulator/) je l’ai installé, plus qu’à tester…
 * https://github.com/romkatv/powerlevel10k 
