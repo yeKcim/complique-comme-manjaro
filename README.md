@@ -442,7 +442,7 @@ Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure sol
 ## Divers jeux
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vitetris.png">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/minetest.jpg">
 </p>
 
 * `pacman -S wesnoth warzone2100 teeworlds supertuxkart blobby2 frogatto sauerbraten chromium-bsu extremetuxracer 0ad`
@@ -455,6 +455,11 @@ Essai voxel :
 * `yay veloren`
 
 ## Dans le terminal
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vitetris.png">
+</p>
+
 * Juste pour le délire `pacman -S rogue nethack` et `yay brogue-ce` mais franchement c’est chaud…
 * `pacman -S vitetris` (tetris solo ou multi, jouable en réseau local)
 
@@ -463,7 +468,8 @@ Essai voxel :
 <p align="center">
   <img src="https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/steam.jpg">
 </p>
-* Steam
+
+* Steam :
     * J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
     * Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
 * `yay heroic-games-launcher-bin` pour les jeux epic
