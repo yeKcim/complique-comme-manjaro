@@ -63,7 +63,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 
 * Quelques paquets supplémentaires :
   * [cht.sh](http://cht.sh/) : `yay cht.sh-git`
-  * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2` → Préférer pyload (`pip install --pre pyload-ng`) ou Xtreme Download Manager ?
+  * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2` Comme non libre → Préférer pyload (`pip install --pre pyload-ng`) ? ou Xtreme Download Manager (`yay xdman && echo "XDMAN_JAVA_HOME=/usr/lib/jvm/java-15-openjdk" > ~/.xdmanrc`) ? Pas très convaincu par ces alternatives pour l’instant…
   * [mkvtoolnix](https://mkvtoolnix.download/) : `yay mkvtoolnix-gui` permet d’éditer les metadatas de vidéos sans réencoder
   * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 * Polices
@@ -72,6 +72,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
   * Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 * `yay marktext` (plein de fonctionnalités sympa)
+* `yay deskreen` pour utiliser n’importe quel téléphone/tablette/etc comme écran secondaire
 
 <!--
 ██████╗  ██████╗ ██╗   ██╗██████╗     ██╗     ███████╗    ██████╗  ██████╗ ██╗   ██╗██╗      ██████╗ ████████╗
