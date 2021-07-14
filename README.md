@@ -208,22 +208,19 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 ## Gnome-shell
 
-* [Voir le nom complet des applications dans le menu](https://extensions.gnome.org/extension/1071/applications-overview-tooltip/)
-* [Calendar Improved](https://extensions.gnome.org/extension/2386/calendar-improved/)
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 * [Compiz alike windows effect](https://extensions.gnome.org/extension/2950/compiz-alike-windows-effect/)
 * [Coverflow Alt-Tab](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
-* [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+* [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) : `yay gnome-shell-extension-dash-to-dock-gnome40-git` en attendant la compatibilité avec Gnome 40
 * [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
 * [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
+* [Gnome 40 UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/). Sur mon téléphone j’installe [KDE Connect](https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/)
-* [Impatience](https://extensions.gnome.org/extension/277/impatience/)
 * [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
-* [ShellTile ](https://extensions.gnome.org/extension/657/shelltile/)
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
-* [Unite](https://extensions.gnome.org/extension/1287/unite/)
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
+
 
 ## Inkscape
 
@@ -584,6 +581,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 
 # À tester ?
 * `yay openpose`
+* [https://github.com/gicmo/gamemode-extension] ?
 * `yay untrunc` pour réparer les mp4 ?
 * gitqlient / gitg
 * tmux
@@ -601,9 +599,8 @@ Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obli
 
 # bluetooth ?
 
-Mon dongle https://wiki.archlinux.org/index.php/bluetooth#CSR_Dongle_0a12:0001
-Je passe du noyau 5.4 à 5.9
-https://www.reddit.com/r/archlinux/comments/e31n5v/where_can_i_find_the_patch_for_cambridge_silicon/
-https://bbs.archlinux.org/viewtopic.php?id=257372
-https://gist.github.com/nevack/6b36b82d715dc025163d9e9124840a07
-```
+* Mon dongle https://wiki.archlinux.org/index.php/bluetooth#CSR_Dongle_0a12:0001
+* https://www.reddit.com/r/archlinux/comments/e31n5v/where_can_i_find_the_patch_for_cambridge_silicon/
+* https://bbs.archlinux.org/viewtopic.php?id=257372
+* https://gist.github.com/nevack/6b36b82d715dc025163d9e9124840a07
+
