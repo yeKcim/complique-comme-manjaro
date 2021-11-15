@@ -7,6 +7,7 @@ set autoindent                          			" indentation automatique avancée
 set smartindent                         			" indentation plus intelligente
 set shiftwidth=4                        			" taille des tabulations (nb d'espace)
 set tabstop=4                           			" taille des tabulations à l'affichage (nb d'espace)
+set foldmethod=marker								" repli
 "***** Recherche *****
 "set incsearch                          			" recherche en même temps que la saisie
 set ignorecase                          			" ne pas prendre en compte la casse pour les recherches

@@ -27,7 +27,7 @@ yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan g
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet
 ```
 
 # Memo gestion des paquets
@@ -47,6 +47,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
   * quelques stats : `yay -Ps`
   * remove : `yay -R nomdepaquet`
   * installation avec modification `yay --editmenu -S nomdepaquet`
+  * nettoyer le cache : `yay -Scc`
   
 * Pour avoir pacman et yay en couleur : `nano /etc/pacman.conf` pour décommenter **Color** dans la section **Misc options**
 
@@ -73,6 +74,9 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 * `yay marktext` (plein de fonctionnalités sympa)
 * `yay deskreen` pour utiliser n’importe quel téléphone/tablette/télé/etc comme report d’écran (stream d’écran
+* `export CUDA_HOME=/opt/cuda/ && yay realesrgan-model` pour jouer avec Real ESRGAN (via https://korben.info/ameliorez-qualite-photos.html) mais je n’arrive pas à l’utiliser pour l’instant
+* Dans mes fichiers textes j’ajoute souvent de gros textes (qui me permettent de mieux visualiser), j’utilisais [un outil en ligne](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) mais pour le faire directement : `yay figlet-fonts-extra` ainsi `figlet -f "ANSI Shadow" -t "Text"` ou `figlet -f "Calvin S" -t TEXT` sont utilisables directement dans mon terminal
+
 
 <!--
 ██████╗  ██████╗ ██╗   ██╗██████╗     ██╗     ███████╗    ██████╗  ██████╗ ██╗   ██╗██╗      ██████╗ ████████╗
@@ -297,6 +301,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * Je choisis parmi les [thèmes disponibles](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), le thème [agnoster](https://github.com/agnoster/agnoster-zsh-theme), je l’indiquerai donc dans mon fichier de configuration personnel
 * J’active mes [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) préférés. Pour cela j'ajoute dans mon zshrc, via `nano $HOME/.zshrc` : `plugins=(archlinux common-aliases colored-man-pages colorize copydir copyfile cp extract git extract git rsync taskwarrior thefuck)`
 * Mon fichier de configuration : `curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh/yekcim.zsh -o $HOME/.oh-my-zsh/custom/yekcim.zsh`
+
 
 ## Bug de démarrage de Tilix
 
@@ -540,6 +545,7 @@ Pour révoquer une clé : `sudo cryptsetup luksKillSlot /dev/sda7 <numero_de_s
 
 Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 
+
 <!--
 ███╗   ██╗ ██████╗ ████████╗███████╗███████╗
 ████╗  ██║██╔═══██╗╚══██╔══╝██╔════╝██╔════╝
@@ -553,6 +559,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * Je suis passé de **Shotwell** à **Digikam** puis de **Digikam** à **Shotwell**, chacun ses goûts, je garde le plus léger
 * J’aurais aimé tester **nautilus-ext-git** mais il ne semble pas fonctionner sur mon poste, je lui préfère donc **rabbitvcs-nautilus**
 
+
 <!--
 ████████╗ ██████╗ ██████╗  ██████╗ 
 ╚══██╔══╝██╔═══██╗██╔══██╗██╔═══██╗
@@ -561,9 +568,9 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
    ██║   ╚██████╔╝██████╔╝╚██████╔╝
    ╚═╝    ╚═════╝ ╚═════╝  ╚═════╝ 
 -->
+
 # Reste à voir :
 * aur dans pacman ?
-* Nettoyage cache yay
 * parefeu ?
 * xorg-xkill ?
 * `yay losslesscut`
@@ -573,11 +580,12 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * [rezonator2](https://github.com/orion-project/rezonator2)
 * Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
-* dictionnaire ? traduction ? ascii ?
+* dictionnaire ? traduction ?
 * Running :
 	* `yay mytourbook`
 	* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
 * Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels`
+* scratch3
 
 # À tester ?
 * `yay openpose`
@@ -593,6 +601,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * https://github.com/romkatv/powerlevel10k 
 * J’ai installé `xorg-fonts-100dpi` pour ajouter quelques polices mais celle que je cherchais n’y est pas
 * yay plots (pour des tracés sympas)
+* un truc pour modifier les metadatas de vidéos ?
 
 Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
 
