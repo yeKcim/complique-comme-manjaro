@@ -1,7 +1,7 @@
 set smarthome                 # équivaut à alt+h
 # set morespace                 # équivaut à alt+o
 set autoindent                # équivaut à alt+i
-set smooth                    # équivaut à alt+s
+#set smooth                    # équivaut à alt+s
 set softwrap                  # équivaut à ctrl+alt+$
 # set casesensitive             # recherche sensible à la casse quel raccourci clavier ?
 # set linenumbers               # équivaut à ctrl+alt+#
@@ -17,7 +17,7 @@ bind M-* comment main         # les alt+num ne sont pas pratiques alt+* pour com
 
 ## To include all existing syntax definitions, you can do:
 include "/usr/share/nano/*.nanorc"
-include "/usr/share/nano-syntax-highlighting/*.nanorc"
+#include "/usr/share/nano-syntax-highlighting/*.nanorc"
 ## Paint the interface elements of nano.
  set titlecolor brightwhite,blue
  set statuscolor brightwhite,green
