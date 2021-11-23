@@ -579,7 +579,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * dvd ?
 * bta-3100
 * [rezonator2](https://github.com/orion-project/rezonator2)
-* Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
+* Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) : [EqualX](https://equalx.sourceforge.io/index.html) ou [KLatexFormula](https://klatexformula.sourceforge.io/)?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ?
 * Running :
