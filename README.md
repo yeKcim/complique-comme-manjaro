@@ -278,6 +278,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 * Remettre les icônes dans les menus (gimp, inkscape,…) : C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) il suffit de taper : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"` ([Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199))
 * Problème des ligatures grasses disgracieuses : `printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
+* Pour [cacher l’imprimante LPR qui apparait dans certaines applis](https://bbs.archlinux.org/viewtopic.php?id=248220) : `echo "gtk-print-backends=file,cups,pdf" >> ~/.config/gtk-3.0/settings.ini`
 
 <!--
 ███████╗███████╗██╗  ██╗
