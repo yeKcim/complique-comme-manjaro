@@ -27,7 +27,7 @@ yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan g
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet qalculate-gtk
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet qalculate-gtk geogebra
 ```
 
 # Memo gestion des paquets
@@ -76,7 +76,6 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 * `yay deskreen` pour utiliser n’importe quel téléphone/tablette/télé/etc comme report d’écran (stream d’écran
 * `export CUDA_HOME=/opt/cuda/ && yay realesrgan-model` pour jouer avec Real ESRGAN (via https://korben.info/ameliorez-qualite-photos.html) mais je n’arrive pas à l’utiliser pour l’instant
 * Dans mes fichiers textes j’ajoute souvent de gros textes en commentaires (qui me permettent de mieux visualiser), j’utilisais [un outil en ligne](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) mais pour le faire directement : `yay figlet-fonts-extra` ainsi `figlet -f "ANSI Shadow" -t "Text"` ou `figlet -f "Calvin S" -t TEXT` sont utilisables directement dans mon terminal
-* `yay plots` et `yay plotjuggler` pour des logiciels de tracés sympas
 
 <!--
 ██████╗  ██████╗ ██╗   ██╗██████╗     ██╗     ███████╗    ██████╗  ██████╗ ██╗   ██╗██╗      ██████╗ ████████╗
