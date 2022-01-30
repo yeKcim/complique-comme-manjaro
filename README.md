@@ -23,11 +23,11 @@ celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverte
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
-yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix \
+yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
-linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet
+linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol bat \
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt
 ```
 
 # Memo gestion des paquets
@@ -354,7 +354,6 @@ j’ajoute **ZSH_DISABLE_COMPFIX="true"** avant **source $ZSH/oh-my-zsh.sh** dan
 
 ```
 ne semble pas suffire mais mettre la valeur fr-bepo dans la variable KEYMAP `sudo nano /etc/vconsole.conf` résout le problème [source](https://wiki.archlinux.fr/dvorak)
-* Comment faire pour que GDM soit en bépo par défaut ?
 
 <!--
 ██╗███╗   ███╗██████╗ ██████╗ ██╗███╗   ███╗ █████╗ ███╗   ██╗████████╗███████╗
