@@ -26,8 +26,9 @@ perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng}
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
-linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol bat \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt
+linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol qalculate-gtk geogebra \
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt  bat
+
 ```
 
 # Memo gestion des paquets
@@ -75,8 +76,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 * `yay marktext` (plein de fonctionnalités sympa)
 * `yay deskreen` pour utiliser n’importe quel téléphone/tablette/télé/etc comme report d’écran (stream d’écran
 * `export CUDA_HOME=/opt/cuda/ && yay realesrgan-model` pour jouer avec Real ESRGAN (via https://korben.info/ameliorez-qualite-photos.html) mais je n’arrive pas à l’utiliser pour l’instant
-* Dans mes fichiers textes j’ajoute souvent de gros textes (qui me permettent de mieux visualiser), j’utilisais [un outil en ligne](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) mais pour le faire directement : `yay figlet-fonts-extra` ainsi `figlet -f "ANSI Shadow" -t "Text"` ou `figlet -f "Calvin S" -t TEXT` sont utilisables directement dans mon terminal
-
+* Dans mes fichiers textes j’ajoute souvent de gros textes en commentaires (qui me permettent de mieux visualiser), j’utilisais [un outil en ligne](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) mais pour le faire directement : `yay figlet-fonts-extra` ainsi `figlet -f "ANSI Shadow" -t "Text"` ou `figlet -f "Calvin S" -t TEXT` sont utilisables directement dans mon terminal
 
 <!--
 ██████╗  ██████╗ ██╗   ██╗██████╗     ██╗     ███████╗    ██████╗  ██████╗ ██╗   ██╗██╗      ██████╗ ████████╗
@@ -278,6 +278,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 * Remettre les icônes dans les menus (gimp, inkscape,…) : C'est faisable avec **dconf-editor** mais comme la clé est vide par défaut (sous Manjaro) il suffit de taper : `dconf write /org/gnome/settings-daemon/plugins/xsettings/overrides "{'Gtk/ButtonImages': <1>, 'Gtk/MenuImages': <1>}"` ([Source](https://forum.ubuntu-fr.org/viewtopic.php?id=2009199))
 * Problème des ligatures grasses disgracieuses : `printf "<match target=\"font\">\n<edit name=\"embeddedbitmap\" mode=\"assign\">\n<bool>false</bool>\n</edit>\n</match>" | sudo tee /etc/fonts/local.conf`
+* Pour [cacher l’imprimante LPR qui apparait dans certaines applis](https://bbs.archlinux.org/viewtopic.php?id=248220) : `echo "gtk-print-backends=file,cups,pdf" >> ~/.config/gtk-3.0/settings.ini`
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -577,7 +578,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * dvd ?
 * bta-3100
 * [rezonator2](https://github.com/orion-project/rezonator2)
-* Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) ?
+* Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) : [EqualX](https://equalx.sourceforge.io/index.html) ou [KLatexFormula](https://klatexformula.sourceforge.io/)?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ?
 * Running :
@@ -599,7 +600,6 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * `yay alacritty-git` (https://ostechnix.com/alacritty-a-lightweight-and-blazingly-fast-terminal-emulator/) je l’ai installé, plus qu’à tester…
 * https://github.com/romkatv/powerlevel10k 
 * J’ai installé `xorg-fonts-100dpi` pour ajouter quelques polices mais celle que je cherchais n’y est pas
-* yay plots (pour des tracés sympas)
 * un truc pour modifier les metadatas de vidéos ?
 
 Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
