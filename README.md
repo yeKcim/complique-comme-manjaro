@@ -582,7 +582,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ?
 * Running :
-	* `yay mytourbook`
+	* `yay mytourbook` (j’ai dû taper `sudo archlinux-java set java-11-openjdk` pour que les dernières versions de mytourbook se lance)
 	* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
 * Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels`
 * scratch3
