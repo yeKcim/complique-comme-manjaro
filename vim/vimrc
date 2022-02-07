@@ -1,18 +1,25 @@
-set number                              			" afficher numéro de lignes
-set fileformats=unix,mac,dos            			" gestion des retours chariot en fonction du type de fichier
-set hlsearch                            			" surligne les résultats de la recherche
-set autochdir                           			" Modifie le répertoire courant pour vim en fonction du fichier ouvert
+set number                              " afficher numéro de lignes
+set fileformats=unix,mac,dos            " gestion des retours chariot en fonction du type de fichier
+set hlsearch                            " surligne les résultats de la recherche
+set autochdir                           " Modifie le répertoire courant pour vim en fonction du fichier ouvert
+set virtualedit=all                     " Permet de se déplacer la ou il n'y a pas de caractères
+set cursorline                          " met en avant la ligne courante
+
 "***** Indentation *****
-set autoindent                          			" indentation automatique avancée
-set smartindent                         			" indentation plus intelligente
-set shiftwidth=4                        			" taille des tabulations (nb d'espace)
-set tabstop=4                           			" taille des tabulations à l'affichage (nb d'espace)
-set foldmethod=marker								" repli
+set autoindent                          " indentation automatique avancée
+set smartindent                         " indentation plus intelligente
+set showmatch                           " vérification présence (, [ ou { à la frappe de ), ] ou }
+set shiftwidth=2                        " taille des tabulations (nb d'espace)
+set softtabstop=2                       " taille des tabulations mixtes (tabulations et espaces)
+set tabstop=2                           " taille des tabulations à l'affichage (nb d'espace)
+set foldmethod=marker                   " repli
+set pt=<F11>                            " évite la double indentation lors de c/c
 "***** Recherche *****
-"set incsearch                          			" recherche en même temps que la saisie
-set ignorecase                          			" ne pas prendre en compte la casse pour les recherches
-"set noic                               			" Prendre en compte la casse pour les recherches
-set smartcase                           			" recherche respectueuse de la case quand une majuscule est saisie
+"set incsearch                          " recherche en même temps que la saisie
+set ignorecase                          " ne pas prendre en compte la casse pour les recherches
+"set noic                               " Prendre en compte la casse pour les recherches
+set smartcase                           " recherche respectueuse de la case quand une majuscule est saisie
+set incsearch                           " recherche en même temps que la saisie
 noremap <F2> :set hlsearch!<cr>:set hlsearch?<cr>	" Activer/désactiver la surbrillance des recherches avec F2
 
 "***** Ajouts raccourcis splits *****
@@ -53,20 +60,21 @@ endif
 " « :source ~/.vimrc » puis « :PlugInstall ». q pour quitter.
 " Commandes : https://github.com/junegunn/vim-plug#commands
 call plug#begin('~/.vim/plugged')
-    Plug 'vim-airline/vim-airline'					" status/tabline
-    Plug 'vim-airline/vim-airline-themes'			" thèmes pour airline
-    Plug 'tpope/vim-fugitive'						" git dans airline
-    Plug 'mhinz/vim-signify'						" git diff in sign column
-    Plug 'yeKcim/vim-bepo'							" bépo mapping
-    Plug 'mbbill/undotree'							" Undo history visualizer
-    Plug 'airblade/vim-gitgutter'					" Shows git diff in the gutter
-    Plug 'tpope/vim-surround'						" easily delete, change and add such surroundings in pairs
-    Plug 'Raimondi/delimitMate'						" automatiquement fermer accolades, parenthéses et autre guillemets
-    Plug 'vim-scripts/colorizer'					" coloration des couleurs #dea05f
-    Plug 'kshenoy/vim-signature'					" afficher les marques
-    Plug 'tpope/vim-commentary'						" commenter/décommenter avec reconnaissance automatique du langage
-    Plug 'lifepillar/vim-solarized8'				" installation automatique du thème"
-    Plug 'dpelle/vim-grammalecte'					" grammalecte
+    Plug 'vim-airline/vim-airline'            " status/tabline
+    Plug 'vim-airline/vim-airline-themes'     " thèmes pour airline
+    Plug 'tpope/vim-fugitive'                 " git dans airline
+    Plug 'mhinz/vim-signify'                  " git diff in sign column
+    Plug 'yeKcim/vim-bepo'                    " bépo mapping
+    Plug 'mbbill/undotree'                    " Undo history visualizer
+    Plug 'airblade/vim-gitgutter'             " Shows git diff in the gutter
+    Plug 'tpope/vim-surround'                 " easily delete, change and add such surroundings in pairs
+    Plug 'Raimondi/delimitMate'               " automatiquement fermer accolades, parenthéses et autre guillemets
+    Plug 'vim-scripts/colorizer'              " coloration des couleurs #dea05f
+    Plug 'kshenoy/vim-signature'              " afficher les marques
+    Plug 'tpope/vim-commentary'               " commenter/décommenter avec reconnaissance automatique du langage
+    Plug 'lifepillar/vim-solarized8'          " installation automatique du thème
+    Plug 'dpelle/vim-grammalecte'             " grammalecte
+    Plug 'scrooloose/nerdcommenter'           " commenter/décommenter aisément 
 call plug#end()
 
 " ╔═╗╔═╗╦  ╔═╗╦═╗╔═╗╔╦╗╦╔═╗╔╗╔  ╔═╗╦ ╦╔╗╔╔╦╗╔═╗═╗ ╦╦╔═╗ ╦ ╦╔═╗   ╔╦╗╦ ╦╔═╗╔╦╗╔═╗
@@ -87,10 +95,10 @@ colorscheme solarized8_high
 " ╦  ╦╦╔╦╗  ╔═╗╦╦═╗╦  ╦╔╗╔╔═╗
 " ╚╗╔╝║║║║══╠═╣║╠╦╝║  ║║║║║╣
 "  ╚╝ ╩╩ ╩  ╩ ╩╩╩╚═╩═╝╩╝╚╝╚═╝ configuration du plugin vim-airline
-set laststatus=2 						" Set a status line
-set encoding=utf-8						" Set encoding so that your fonts look okay.
+set laststatus=2                        " Set a status line
+set encoding=utf-8                      " Set encoding so that your fonts look okay.
 filetype plugin indent on
-let g:airline_powerline_fonts = 1					" Enable powerline fonts
+let g:airline_powerline_fonts = 1       " Enable powerline fonts
 let g:airline_theme='murmur'
 
 " ╔═╗╔╗ ╦═╗╔═╗╦  ╦╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
@@ -104,7 +112,7 @@ iabbrev h1 <h1></h1>
 iabbrev h2 <h2></h2>
 iabbrev h3 <h3></h3>
 iabbrev h4 <h5></h4>
-iabbrev ah <a href=></a>
+iabbrev ahr <a href=></a>
 
 " ╔═╗╦═╗╔═╗╔═╗╔═╗╔═╗   ╔═╗╔═╗╔═╗╦╔═╗╦═╗
 " ╠═╝╠╦╝║╣ ╚═╗╚═╗║╣  ═ ╠═╝╠═╣╠═╝║║╣ ╠╦╝
