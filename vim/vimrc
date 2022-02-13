@@ -20,7 +20,7 @@ set ignorecase                          " ne pas prendre en compte la casse pour
 "set noic                               " Prendre en compte la casse pour les recherches
 set smartcase                           " recherche respectueuse de la case quand une majuscule est saisie
 set incsearch                           " recherche en même temps que la saisie
-noremap <F2> :set hlsearch!<cr>:set hlsearch?<cr>	" Activer/désactiver la surbrillance des recherches avec F2
+noremap <F2> :set hlsearch!<cr>:set hlsearch?<cr>     " Activer/désactiver la surbrillance des recherches avec F2
 
 "***** Ajouts raccourcis splits *****
 map <C-w><Space> :split<Space>
