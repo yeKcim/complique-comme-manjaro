@@ -526,8 +526,9 @@ Dans les préférences de Gedit :
 * Téléchargement de mon fichier de config : `curl -fLo ~/.vimrc --create-dirs https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vim/vimrc`
 Ce fichier de configuration vérifie que le gestionnaire de plugin est installé. S’il ne l’est pas, il est téléchargé automatiquement, l’active et installe les plugins de la liste.
 * Au premier lancement, un message d’erreur m’indique que le thème n’a pas été trouvé, il suffit alors de lancer `:PlugInstall`
+* `pacman -S vim-grammalecte`. Pour que vim-grammalecte soit opérationnel : `mkdir -p $HOME/grammalecte/pythonpath && ln -s /usr/bin/grammalecte-cli $HOME/grammalecte/pythonpath/cli.py`. L’extension s’utilise via `:GrammalecteCheck`
 
-* ???????? `pacman -S vim-grammalecte vim-spell-fr` ?????????
+* `vim-spell-fr` ??
 
 <!--
  ██████╗██╗  ██╗██╗███████╗███████╗██████╗ ███████╗███╗   ███╗███████╗███╗   ██╗████████╗
@@ -579,6 +580,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * bta-3100
 * [rezonator2](https://github.com/orion-project/rezonator2)
 * Un éditeur d’équation genre [CodeCogs Equation Editor](https://www.codecogs.com/latex/eqneditor.php) ? et [latex ocr](https://webdemo.myscript.com/views/math/index.html) : [EqualX](https://equalx.sourceforge.io/index.html) ou [KLatexFormula](https://klatexformula.sourceforge.io/)?
+* Pour éditer du latex : Gummi ? gnome-latex ? lyx ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ?
 * Running :
