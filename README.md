@@ -591,6 +591,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 
 # À tester ?
 * `yay openpose`
+* essayer Lix (Lemmings clone) : `yay lix`
 * [https://github.com/gicmo/gamemode-extension] ?
 * `yay untrunc` pour réparer les mp4 ?
 * gitqlient / gitg
