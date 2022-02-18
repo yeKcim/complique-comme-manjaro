@@ -254,8 +254,10 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 ## Correcteur grammatical grammalecte
 
 * `yay libreoffice-extension-grammalecte-fr`
+* `yay gedit-plugin-grammalecte`
 * [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
 * [Extension Thunderbird](https://grammalecte.net/#download) <!-- incompatible avec la dernière version de thunderbird ? -->
+* `pacman -S vim-grammalecte`. Pour que vim-grammalecte soit opérationnel : `mkdir -p $HOME/grammalecte/pythonpath && ln -s /usr/bin/grammalecte-cli $HOME/grammalecte/pythonpath/cli.py`. L’extension s’utilise via `:GrammalecteCheck`
 
 ## Blender
 
@@ -526,7 +528,6 @@ Dans les préférences de Gedit :
 * Téléchargement de mon fichier de config : `curl -fLo ~/.vimrc --create-dirs https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/vim/vimrc`
 Ce fichier de configuration vérifie que le gestionnaire de plugin est installé. S’il ne l’est pas, il est téléchargé automatiquement, l’active et installe les plugins de la liste.
 * Au premier lancement, un message d’erreur m’indique que le thème n’a pas été trouvé, il suffit alors de lancer `:PlugInstall`
-* `pacman -S vim-grammalecte`. Pour que vim-grammalecte soit opérationnel : `mkdir -p $HOME/grammalecte/pythonpath && ln -s /usr/bin/grammalecte-cli $HOME/grammalecte/pythonpath/cli.py`. L’extension s’utilise via `:GrammalecteCheck`
 
 * `vim-spell-fr` ??
 
@@ -594,7 +595,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * essayer Lix (Lemmings clone) : `yay lix`
 * [https://github.com/gicmo/gamemode-extension] ?
 * `yay untrunc` pour réparer les mp4 ?
-* gitqlient / gitg
+* gitg + tig + Gittyup + Ungit ?
 * tmux
 * autojump ?
 * yay torbrowser-launcher
