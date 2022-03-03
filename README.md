@@ -27,7 +27,7 @@ yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan g
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
 python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
 linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol qalculate-gtk geogebra \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt  bat
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt bat
 
 ```
 
@@ -302,7 +302,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 ## Personnalisation
 
 * Je choisis parmi les [thèmes disponibles](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), le thème [agnoster](https://github.com/agnoster/agnoster-zsh-theme), je l’indiquerai donc dans mon fichier de configuration personnel
-* J’active mes [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) préférés. Pour cela j'ajoute dans mon zshrc, via `nano $HOME/.zshrc` : `plugins=(archlinux common-aliases colored-man-pages colorize copydir copyfile cp extract git extract git rsync taskwarrior thefuck)`
+* J’active mes [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) préférés. Pour cela j'ajoute dans mon zshrc, via `nano $HOME/.zshrc` : `plugins=(archlinux common-aliases colored-man-pages colorize copypath copyfile cp extract git extract git rsync taskwarrior thefuck)`
 * Mon fichier de configuration : `curl https://raw.githubusercontent.com/yeKcim/complique-comme-manjaro/master/zsh/yekcim.zsh -o $HOME/.oh-my-zsh/custom/yekcim.zsh`
 
 

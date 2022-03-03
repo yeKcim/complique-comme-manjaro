@@ -2,7 +2,7 @@ set number                              " afficher numéro de lignes
 set fileformats=unix,mac,dos            " gestion des retours chariot en fonction du type de fichier
 set hlsearch                            " surligne les résultats de la recherche
 set autochdir                           " Modifie le répertoire courant pour vim en fonction du fichier ouvert
-set virtualedit=all                     " Permet de se déplacer la ou il n'y a pas de caractères
+"set virtualedit=all                     " Permet de se déplacer la ou il n'y a pas de caractères
 set cursorline                          " met en avant la ligne courante
 
 "***** Indentation *****
