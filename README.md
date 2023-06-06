@@ -25,9 +25,10 @@ gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs k
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
-python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
-linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol qalculate-gtk geogebra \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt bat
+python-nautilus steam-manjaro game-devices-udev arc-gtk-theme yaru-{gtk-theme,icon-theme,gnome-shell-theme} \
+grammalecte easytag shotwell mypaint youtube-dl linux-steam-integration libxml2 python2-lxml \
+cura{,-resources-materials} calibre openssh pavucontrol zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} \
+qalculate-gtk geogebra vim peek exa figlet avidemux-qt bat
 
 ```
 
@@ -214,17 +215,17 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 * [Compiz alike windows effect](https://extensions.gnome.org/extension/2950/compiz-alike-windows-effect/)
-* [Coverflow Alt-Tab](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
 * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) : `yay gnome-shell-extension-dash-to-dock-gnome40-git` en attendant la compatibilité avec Gnome 40
-* [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
+* [Desktop Icons (Libadwaita, Gtk4 Desktop Icons NG with GSconnect Integration, Drag and Drop onto Dock)](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
 * [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
-* [Gnome 40 UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
+* [Gnome 4x UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/). Sur mon téléphone j’installe [KDE Connect](https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/)
 * [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
+* [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
-
+* [Transparent Window Moving](https://extensions.gnome.org/extension/1446/transparent-window-moving/)
 
 ## Inkscape
 
