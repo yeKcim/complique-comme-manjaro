@@ -405,7 +405,7 @@ Par défaut Cura est en Anglais mais dans les Paramètres il est possible de sé
 
 ## STL
 
-Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad freecad-assembly3-git`)
+Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad` dans lequel j’ajoute l’extension [Fasteners Workbench](https://wiki.freecad.org/Fasteners_Workbench) pour la gestion des vis et écrous)
 
 
 
@@ -548,6 +548,18 @@ Pour révoquer une clé : `sudo cryptsetup luksKillSlot /dev/sda7 <numero_de_s
 
 Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 
+<!--
+██████╗ ██╗   ██╗███╗   ██╗███╗   ██╗██╗███╗   ██╗ ██████╗ 
+██╔══██╗██║   ██║████╗  ██║████╗  ██║██║████╗  ██║██╔════╝ 
+██████╔╝██║   ██║██╔██╗ ██║██╔██╗ ██║██║██╔██╗ ██║██║  ███╗
+██╔══██╗██║   ██║██║╚██╗██║██║╚██╗██║██║██║╚██╗██║██║   ██║
+██║  ██║╚██████╔╝██║ ╚████║██║ ╚████║██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+--> 
+* Running :
+	* `yay mytourbook` (j’ai dû taper `sudo archlinux-java set java-11-openjdk` pour que les dernières versions de mytourbook se lance)
+	* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
+
 
 <!--
 ███╗   ██╗ ██████╗ ████████╗███████╗███████╗
@@ -585,10 +597,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * Pour éditer du latex : Gummi ? gnome-latex ? lyx ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ?
-* Running :
-	* `yay mytourbook` (j’ai dû taper `sudo archlinux-java set java-11-openjdk` pour que les dernières versions de mytourbook se lance)
-	* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
-* Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels`
+* Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels python-matplotlib python-numpy python-sympy python-pip python-scipy python-yaml python-pandas`
 * scratch3
 
 # À tester ?
