@@ -613,8 +613,9 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * siril
 * `yay alacritty-git` (https://ostechnix.com/alacritty-a-lightweight-and-blazingly-fast-terminal-emulator/) je l’ai installé, plus qu’à tester…
 * https://github.com/romkatv/powerlevel10k 
-* J’ai installé `xorg-fonts-100dpi` pour ajouter quelques polices mais celle que je cherchais n’y est pas
+* J’ai installé `xorg-fonts-100dpi` pour ajouter quelques polices mais celle que je cherchais n’y est pas, `ttf-google-fonts-git` aussi…
 * un truc pour modifier les metadatas de vidéos ?
+* https://circle.gnome.org/ ?
 
 Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
 
