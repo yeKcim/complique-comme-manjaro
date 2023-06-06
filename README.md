@@ -262,7 +262,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 ## Blender
 
-* `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
+* `yay blender-plugin-animation-nodes-git` (penser également à : [latex2blender](https://github.com/ghseeli/latex2blender), [blender-osm](https://prochitecture.gumroad.com/l/blender-osm),…)
 * `yay --editmenu -S optix`
   * Je télécharge NVIDIA-OptiX depuis https://developer.nvidia.com/designworks/optix/download à placer dans ~/.cache/yay/optix/
   * J’édite le numéro de version (7.2.0 et le sha5sum)
