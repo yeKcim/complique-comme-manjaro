@@ -18,15 +18,15 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 # Paquets
 
 ```
-sudo pacman -S thunderbird gimp{,-refocus,-plugin-gmic} blender inkscape darktable openscad owncloud-client \
-celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting playonlinux\
+sudo pacman -S thunderbird gimp-plugin-gmic blender inkscape darktable openscad owncloud-client cups xorg-xkill \
+celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting \
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff \
-ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
-python-nautilus steam-manjaro game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
-linux-steam-integration libxml2 python2-lxml cura{,-resources-materials} calibre openssh pavucontrol qalculate-gtk geogebra \
+ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation,joypixels} {awesome-terminal,powerline}-fonts \
+python-nautilus game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
+steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui \
 zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt bat
 
 ```
@@ -66,11 +66,9 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 * Quelques paquets supplémentaires :
   * [cht.sh](http://cht.sh/) : `yay cht.sh-git`
   * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2` Comme non libre → Préférer pyload (`pip install --pre pyload-ng`) ? ou Xtreme Download Manager (`yay xdman && echo "XDMAN_JAVA_HOME=/usr/lib/jvm/java-15-openjdk" > ~/.xdmanrc`) ? Pas très convaincu par ces alternatives pour l’instant…
-  * [mkvtoolnix](https://mkvtoolnix.download/) : `yay mkvtoolnix-gui` permet d’éditer les metadatas de vidéos sans réencoder
   * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 * Polices
   * Pour avoir la police Sawasdee : `yay ttf-tlwg`
-  * Pour des emojis qui s'affichent comme il faut dans **Emoji Selector** : `yay ttf-joypixels`
   * Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 * `yay marktext` (plein de fonctionnalités sympa)
@@ -214,13 +212,15 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 * [Compiz alike windows effect](https://extensions.gnome.org/extension/2950/compiz-alike-windows-effect/)
-* [Coverflow Alt-Tab](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
 * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) : `yay gnome-shell-extension-dash-to-dock-gnome40-git` en attendant la compatibilité avec Gnome 40
 * [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
-* [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
+* ~~[Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)~~
 * [Gnome 40 UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/). Sur mon téléphone j’installe [KDE Connect](https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/)
+* [Impatience](https://extensions.gnome.org/extension/277/impatience/)
 * [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
+* [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
+* [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/) car gnome par défaut ne divise l’écran qu’en 2.
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
@@ -261,11 +261,8 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 ## Blender
 
-* `yay blender-plugin-animation-nodes-git` (peut-être d’autres à prévoir ainsi…)
-* `yay --editmenu -S optix`
-  * Je télécharge NVIDIA-OptiX depuis https://developer.nvidia.com/designworks/optix/download à placer dans ~/.cache/yay/optix/
-  * J’édite le numéro de version (7.2.0 et le sha5sum)
-  * OptiX est alors disponible dans les propositions de denoising, toutefois, il fait planté mon blender… (à voir plus tard)
+* Mettre ici mes extensions blender préférées
+
 
 <!--
 ██████╗ ███████╗██████╗ ███████╗ ██████╗        ██╗██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗ 
@@ -374,12 +371,11 @@ Pour mon imprimante Brother MFC-J4620DW :
     * J’ajoute l’imprimante, *AppSocket/HP JetDirect* : **socket://192.168.0.5** en lui indiquant le ppd : **/opt/brother/Printers/mfcj4620dw/cupswrapper/brother_mfcj4620dw_printer_en.ppd**
 ## Scanner
 ```
-
 yay brscan4
 sudo brsaneconfig4 -a name="MFC-J4620DW" model="MFC-J4620DW" ip=192.168.0.5
 
 ```
-le scanner sera alors utilisable via **simplescan**
+le scanner sera alors utilisable via **simple-scan**
 
 ## Photocopieur Canon
 Pour le copieur du boulot (partage smb), l’installation n’est pas aussi simple qu’à la maison (en particulier pour renseigner les informations de connexion. Je tente l’installation via __http://localhost:631/admin__ et via le gestionnaire d’imprimantes de Gnome mais ceux-ci ne sont pas assez pratique ou complet. Avec **system-config-printer** l’installation est plus simple.
@@ -398,7 +394,7 @@ J'ai ajouté **manjaro-settings-samba** comme paquet pour résoudre un problème
 
 ## Ultimaker Cura
 
-Cura est dans la liste des paquets que j’installe. Je le lance, au premier démarrage je peux me connecter à un compte Ultimaker. J’ajoute une imprimante non connectée en réseau, je sélectionne le profil de l'Alfawise u30 qui est identique à ma Longer LK4 pro.
+`yay cura-bin`. Je le lance, au premier démarrage je peux me connecter à un compte Ultimaker. J’ajoute une imprimante non connectée en réseau, je sélectionne le profil de l'Alfawise u30 qui est identique à ma Longer LK4 pro.
 
 Par défaut Cura est en Anglais mais dans les Paramètres il est possible de sélectionner la langue de son choix.
 
