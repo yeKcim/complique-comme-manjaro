@@ -28,7 +28,6 @@ ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-liberti
 python-nautilus game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
 steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui \
 zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt bat
-
 ```
 
 # Memo gestion des paquets
@@ -219,12 +218,13 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/). Sur mon téléphone j’installe [KDE Connect](https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/)
 * [Impatience](https://extensions.gnome.org/extension/277/impatience/)
 * [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
+* [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/) car gnome par défaut ne divise l’écran qu’en 2.
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 * [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
-
+* [Transparent Window Moving](https://extensions.gnome.org/extension/1446/transparent-window-moving/)
 
 ## Inkscape
 
@@ -400,7 +400,7 @@ Par défaut Cura est en Anglais mais dans les Paramètres il est possible de sé
 
 ## STL
 
-Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad freecad-assembly3-git`)
+Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad` dans lequel j’ajoute l’extension [Fasteners Workbench](https://wiki.freecad.org/Fasteners_Workbench) pour la gestion des vis et écrous)
 
 
 
@@ -543,6 +543,18 @@ Pour révoquer une clé : `sudo cryptsetup luksKillSlot /dev/sda7 <numero_de_s
 
 Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 
+<!--
+██████╗ ██╗   ██╗███╗   ██╗███╗   ██╗██╗███╗   ██╗ ██████╗ 
+██╔══██╗██║   ██║████╗  ██║████╗  ██║██║████╗  ██║██╔════╝ 
+██████╔╝██║   ██║██╔██╗ ██║██╔██╗ ██║██║██╔██╗ ██║██║  ███╗
+██╔══██╗██║   ██║██║╚██╗██║██║╚██╗██║██║██║╚██╗██║██║   ██║
+██║  ██║╚██████╔╝██║ ╚████║██║ ╚████║██║██║ ╚████║╚██████╔╝
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+--> 
+* Running :
+	* `yay mytourbook` (j’ai dû taper `sudo archlinux-java set java-11-openjdk` pour que les dernières versions de mytourbook se lance)
+	* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
+
 
 <!--
 ███╗   ██╗ ██████╗ ████████╗███████╗███████╗
@@ -580,10 +592,7 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * Pour éditer du latex : Gummi ? gnome-latex ? lyx ?
 * il y a d’autres softs sympas dans mes articles LP, à voir.
 * dictionnaire ? traduction ?
-* Running :
-	* `yay mytourbook` (j’ai dû taper `sudo archlinux-java set java-11-openjdk` pour que les dernières versions de mytourbook se lance)
-	* [GpxTrackPoster](https://github.com/flopp/GpxTrackPoster) (pour ce soft `sudo pacman -S python-virtualenv`)
-* Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels`
+* Python : `sudo pacman -S jupyter-notebook spyder python-spyder-kernels python-matplotlib python-numpy python-sympy python-pip python-scipy python-yaml python-pandas`
 * scratch3
 
 # À tester ?
@@ -599,8 +608,9 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 * siril
 * `yay alacritty-git` (https://ostechnix.com/alacritty-a-lightweight-and-blazingly-fast-terminal-emulator/) je l’ai installé, plus qu’à tester…
 * https://github.com/romkatv/powerlevel10k 
-* J’ai installé `xorg-fonts-100dpi` pour ajouter quelques polices mais celle que je cherchais n’y est pas
+* J’ai installé `xorg-fonts-100dpi` pour ajouter quelques polices mais celle que je cherchais n’y est pas, `ttf-google-fonts-git` aussi…
 * un truc pour modifier les metadatas de vidéos ?
+* https://circle.gnome.org/ ?
 
 Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obligé de faire `systemctl restart teamviewerd.service` pour le rendre opérationnel) mais c’est un logiciel propriétaire, il est peut-être dommage de ne pas essayer un simple et libre VNC. J’aimerais utiliser `pacman -S remmina` mais pour passer les box tranquillement, il faudra utiliser la fonction **Connexion inverse** ou un tunnel ssh et je ne m’en sors pas !
 
