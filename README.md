@@ -88,7 +88,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 
 Quelques outils supplémentaires pour le boulot :
 
-* `yay scidavis`
+* `flatpak install flathub net.sourceforge.scidavis` (la version aur ne s’installe pas)
 * `yay alphaplot`
 * `sudo pacman -S octave`
   Et éventuellement :
