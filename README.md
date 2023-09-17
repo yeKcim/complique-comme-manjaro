@@ -19,14 +19,14 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 
 ```
 sudo pacman -S thunderbird gimp-plugin-gmic blender inkscape darktable openscad owncloud-client cups xorg-xkill \
-celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting \
+celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting baobab \
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
-perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop \
+perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop libreoffice-fresh \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation,joypixels} {awesome-terminal,powerline}-fonts \
-python-nautilus game-devices-udev arc-gtk-theme grammalecte easytag shotwell mypaint youtube-dl \
-steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui \
+python-nautilus game-devices-udev grammalecte easytag shotwell mypaint youtube-dl gnome-{recipies,contacts,maps} \
+steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui gpxsee \
 zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt bat
 ```
 
@@ -213,7 +213,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [Compiz alike windows effect](https://extensions.gnome.org/extension/2950/compiz-alike-windows-effect/)
 * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) : `yay gnome-shell-extension-dash-to-dock-gnome40-git` en attendant la compatibilité avec Gnome 40
 * [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
-* ~~[Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)~~
+* ~~[Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)~~ [Smile extension](https://extensions.gnome.org/extension/6096/smile-complementary-extension/) (prérequis : `yay smile`)
 * [Gnome 40 UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/). Sur mon téléphone j’installe [KDE Connect](https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/)
 * [Impatience](https://extensions.gnome.org/extension/277/impatience/)
@@ -622,3 +622,28 @@ Pour la prise en main à distance, il y a éventuellement `yay teamviewer` (obli
 * https://bbs.archlinux.org/viewtopic.php?id=257372
 * https://gist.github.com/nevack/6b36b82d715dc025163d9e9124840a07
 
+
+
+
+# Essai nvChad
+
+`git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim`
+
+` th` pour sélectionner le thème bearded-arc ou github_dark
+
+Ça va pas être simple. Il va falloir du bépo, du grammalecte,… Et il va falloir limiter les propositions de complétions qui sont beaucoup trop gênantes pour un texte de base, à n’activer que pour le code !
+
+Première chose à régler, il faut qu’il gère le bépo !
+
+  `Plug 'yeKcim/vim-bepo'                    " bépo mapping` ?
+
+À comprendre :
+
+* Comment fonctionne et que fait telescope
+* Comment fonctionne et que fait fuzzy finder
+* LSP ?
+* Activer désactiver les propositions de textes ?
+* dap ?
+* inlay-hint ?
+
+* di" est génial mais comment on fait pour di«» ?
