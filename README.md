@@ -212,19 +212,15 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 * [Compiz alike windows effect](https://extensions.gnome.org/extension/2950/compiz-alike-windows-effect/)
 * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) : `yay gnome-shell-extension-dash-to-dock-gnome40-git` en attendant la compatibilité avec Gnome 40
-* [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
-* ~~[Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)~~ [Smile extension](https://extensions.gnome.org/extension/6096/smile-complementary-extension/) (prérequis : `yay smile`)
+* [Gtk4 Desktop Icons NG](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
+* [Emoji copy](https://github.com/felipeftn/emoji-copy) (prérequis : `yay noto-fonts-emoji`) : l’extension qui permet d’insérer facilement des emojis
 * [Gnome 40 UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
 * [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/) et l’[extension Firefox](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/). Sur mon téléphone j’installe [KDE Connect](https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/)
 * [Impatience](https://extensions.gnome.org/extension/277/impatience/)
 * [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)
-* [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
 * [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/) car gnome par défaut ne divise l’écran qu’en 2.
-* [Top Panel Workspace Scroll](https://extensions.gnome.org/extension/701/top-panel-workspace-scroll/)
 * [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
-* [Workspace Indicator](https://extensions.gnome.org/extension/21/workspace-indicator/)
-* [Transparent Window Moving](https://extensions.gnome.org/extension/1446/transparent-window-moving/)
 
 ## Inkscape
 
