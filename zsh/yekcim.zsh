@@ -26,13 +26,13 @@ bindkey '^[[Z' undo
 alias diff='colordiff -u'
 alias dir='dir --color=always'
 alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
-alias e='exa --long --tree --level=1 --icons --git -lg --group-directories-first'
+alias e='eza --long --tree --level=1 --icons --git -lg --group-directories-first'
 
 ###### Divers ######
 alias stat_sys="echo ' ' && uname -a && echo ' '&& uptime &&echo ' '&& df && echo ' '" # Affiche quelques statistiques à propos de l'ordinateur
 alias SAVE="rsync -avz --delete --exclude-from=/mnt/data/.rsync_exclude.txt --no-links /mnt/data /run/media/yekcim/yekdisk/yekcim-desktop/; rsync -avz --delete --exclude-from=/mnt/data/.rsync_exclude.txt --no-links /home/yekcim/ /run/media/yekcim/yekdisk/yekcim-desktop/home ; rsync -e ssh -avzz yekcim@192.168.0.4:/home/yekcim/Livres/ /run/media/yekcim/yekdisk/yeklivres/" # Backup
 alias freetv="vlc http://mafreebox.freebox.fr/freeboxtv/playlist.m3u" # freebox tv
-alias youtube-dl='youtube-dl --prefer-ffmpeg -f bestvideo+bestaudio' # youtube-dl
+alias youtube-dl='yt-dlp'
 
 ##### Depuis manjaro-zsh-config ######
 setopt correct                                                  # Auto correct mistakes
