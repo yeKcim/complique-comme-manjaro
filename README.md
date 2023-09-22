@@ -27,7 +27,7 @@ yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan g
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation,joypixels} {awesome-terminal,powerline}-fonts \
 python-nautilus game-devices-udev grammalecte easytag shotwell mypaint gnome-{recipies,contacts,maps} yt-dlp \
 steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui gpxsee \
-zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek exa figlet avidemux-qt bat
+zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek figlet avidemux-qt bat
 ```
 
 # Memo gestion des paquets
@@ -66,6 +66,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
   * [cht.sh](http://cht.sh/) : `yay cht.sh-git`
   * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2` Comme non libre → Préférer pyload (`pip install --pre pyload-ng`) ? ou Xtreme Download Manager (`yay xdman && echo "XDMAN_JAVA_HOME=/usr/lib/jvm/java-15-openjdk" > ~/.xdmanrc`) ? Pas très convaincu par ces alternatives pour l’instant…
   * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
+* [eza-git](https://github.com/eza-community/eza) une version plus moderne de `ls`
 * Polices
   * Pour avoir la police Sawasdee : `yay ttf-tlwg`
   * Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
