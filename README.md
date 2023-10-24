@@ -213,6 +213,7 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 * [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 * [Compiz alike windows effect](https://extensions.gnome.org/extension/2950/compiz-alike-windows-effect/)
 * [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) : `yay gnome-shell-extension-dash-to-dock-gnome40-git` en attendant la compatibilité avec Gnome 40
+* [Dim Background Windows](https://extensions.gnome.org/extension/6313/dim-background-windows/) assombri/désature les fenêtres qui n’ont pas le focus, idéal mieux visualiser où on est actif
 * [Gtk4 Desktop Icons NG](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
 * [Emoji copy](https://github.com/felipeftn/emoji-copy) (prérequis : `yay noto-fonts-emoji`) : l’extension qui permet d’insérer facilement des emojis
 * [Gnome 40 UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
