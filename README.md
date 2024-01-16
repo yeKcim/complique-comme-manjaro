@@ -23,9 +23,9 @@ celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverte
 texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop libreoffice-fresh \
-yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff \
+yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff font-manager \
 ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation,joypixels} {awesome-terminal,powerline}-fonts \
-python-nautilus game-devices-udev grammalecte easytag shotwell mypaint gnome-{recipies,contacts,maps} yt-dlp \
+python-nautilus game-devices-udev grammalecte easytag shotwell mypaint gnome-{recipies,contacts,maps} yt-dlp heroic-games-launcher \
 steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui gpxsee \
 zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek figlet avidemux-qt bat
 ```
@@ -75,6 +75,8 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 * `yay deskreen` pour utiliser n’importe quel téléphone/tablette/télé/etc comme report d’écran (stream d’écran
 * `export CUDA_HOME=/opt/cuda/ && yay realesrgan-model` pour jouer avec Real ESRGAN (via https://korben.info/ameliorez-qualite-photos.html) mais je n’arrive pas à l’utiliser pour l’instant
 * Dans mes fichiers textes j’ajoute souvent de gros textes en commentaires (qui me permettent de mieux visualiser), j’utilisais [un outil en ligne](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) mais pour le faire directement : `yay figlet-fonts-extra` ainsi `figlet -f "ANSI Shadow" -t "Text"` ou `figlet -f "Calvin S" -t TEXT` sont utilisables directement dans mon terminal
+* Screensharing / Miracast : `yay gnome-network-displays` (seulement via wifi, pour wifi-direct. Comment faire via le réseau ?)
+
 
 <!--
 ██████╗  ██████╗ ██╗   ██╗██████╗     ██╗     ███████╗    ██████╗  ██████╗ ██╗   ██╗██╗      ██████╗ ████████╗
@@ -471,7 +473,6 @@ Essai voxel :
 * Steam :
     * J’ajoute */mnt/data/SteamGames* dans la liste des dossiers et le défini par défaut (steam → paramètres →  Téléchargements)
     * Je dois également modifier */usr/share/applications/steam.desktop* pour supprimer **%U** afin d’avoir un raccourci Steam fonctionnel
-* `yay heroic-games-launcher-bin` pour les jeux epic
 * `yay lutris` pour installer :
     * [Uplay](https://lutris.net/games/uplay/) pour installer **Trackmania 2020 Starter**
     * [Magic the gathering arena](https://lutris.net/games/magic-the-gathering-arena/)
