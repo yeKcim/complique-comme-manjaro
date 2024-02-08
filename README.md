@@ -20,7 +20,7 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 ```
 sudo pacman -S thunderbird gimp-plugin-gmic blender inkscape darktable openscad owncloud-client cups xorg-xkill \
 celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting baobab \
-texlive{-bibtexextra,-latexextra,-pictures,-langextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
+texlive{-bibtexextra,-latexextra,-pictures,-langextra,-fontsextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop libreoffice-fresh \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff font-manager \
@@ -69,6 +69,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 * [eza-git](https://github.com/eza-community/eza) une version plus moderne de `ls`
 * Polices
   * Pour avoir la police Sawasdee : `yay ttf-tlwg`
+  * Pour avoir la police Gentium : `yay ttf-gentium-basic`
   * Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 * `yay marktext` (plein de fonctionnalités sympa)
