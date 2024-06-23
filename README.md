@@ -24,7 +24,7 @@ texlive{-bibtexextra,-latexextra,-pictures,-langextra,-fontsextra} img2pdf pstoe
 gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop libreoffice-fresh \
 yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff font-manager \
-ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation,joypixels} {awesome-terminal,powerline}-fonts \
+ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation,joypixels,league-spartan} {awesome-terminal,powerline}-fonts \
 python-nautilus game-devices-udev grammalecte easytag shotwell mypaint gnome-{recipies,contacts,maps} yt-dlp heroic-games-launcher \
 steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui gpxsee \
 zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek figlet avidemux-qt bat
