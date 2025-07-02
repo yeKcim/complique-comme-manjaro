@@ -68,8 +68,7 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
   * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 * [eza-git](https://github.com/eza-community/eza) une version plus moderne de `ls`
 * Polices
-  * Pour avoir la police Sawasdee : `yay ttf-tlwg`
-  * Pour avoir la police Gentium : `yay ttf-gentium-basic`
+  * Sawasdee : `yay ttf-tlwg`, Gentium : `yay ttf-gentium-basic`, League Spartan :`yay ttf-league-spartan-variable`
   * Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 * `yay marktext` (plein de fonctionnalités sympa)
