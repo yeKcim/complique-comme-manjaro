@@ -18,15 +18,15 @@ J’installe Manjaro-Gnome. Une fois l’installation terminée, je lance l’ut
 # Paquets
 
 ```
-sudo pacman -S thunderbird gimp-plugin-gmic blender inkscape darktable openscad owncloud-client cups xorg-xkill \
+sudo pacman -S thunderbird gimp-plugin-gmic blender inkscape darktable cups xorg-xkill \
 celluloid vlc ffmpeg gst-plugins-{bad,good,ugly} kdenlive audacity soundconverter nano-syntax-highlighting baobab \
 texlive{-bibtexextra,-latexextra,-pictures,-langextra,-fontsextra} img2pdf pstoedit pdf{2svg,arranger,tk} xournalpp chromium \
 gnuplot p7zip htop glances pydf thefuck tldr gparted exfat-utils ntfs-3g sshfs keepassxc unzip trash-cli optipng \
 perl-image-exiftool jhead gzip poppler xdg-utils tesseract{,-data-fra,-data-eng} ghostscript cozy-desktop libreoffice-fresh \
-yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins tilix colordiff font-manager \
-ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation,joypixels,league-spartan} {awesome-terminal,powerline}-fonts \
-python-nautilus game-devices-udev grammalecte easytag shotwell mypaint gnome-{recipies,contacts,maps} yt-dlp heroic-games-launcher \
-steam linux-steam-integration libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui gpxsee \
+yay base-devel pkgfile meld diffpdf system-config-printer lollypop simple-scan gedit-plugins ghostty colordiff font-manager \
+ttf-{roboto,roboto-mono,ubuntu-font-family,caladea,linux-libertine,linux-libertine-g,liberation} {awesome-terminal,powerline}-fonts \
+python-nautilus game-devices-udev grammalecte easytag shotwell mypaint gnome-{contacts,maps} yt-dlp heroic-games-launcher \
+steam libxml2 calibre openssh pavucontrol qalculate-gtk geogebra mkvtoolnix-gui gpxsee nextcloud-client \
 zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} vim peek figlet avidemux-qt bat
 ```
 
@@ -64,12 +64,13 @@ zsh-{autosuggestions,completions,history-substring-search,syntax-highlighting} v
 
 * Quelques paquets supplémentaires :
   * [cht.sh](http://cht.sh/) : `yay cht.sh-git`
-  * [Jdownloader2](https://jdownloader.org) : `yay jdownloader2` Comme non libre → Préférer pyload (`pip install --pre pyload-ng`) ? ou Xtreme Download Manager (`yay xdman && echo "XDMAN_JAVA_HOME=/usr/lib/jvm/java-15-openjdk" > ~/.xdmanrc`) ? Pas très convaincu par ces alternatives pour l’instant…
   * livrets à partir de pdf ? **bookletimposer** ne semble pas fonctionner, trouver une alternative…
 * [eza-git](https://github.com/eza-community/eza) une version plus moderne de `ls`
 * Polices
   * Pour avoir la police Sawasdee : `yay ttf-tlwg`
   * Pour avoir la police Gentium : `yay ttf-gentium-basic`
+  * Pour avoir la police joypixels: `yay ttf-joypixels`
+  * Pour avoir la police League Spartan : `yay ttf-league-spartan`
   * Pour les polices Microsoft (pourrait être mieux, voir source) : `yay ttf-ms-fonts && yay ttf-vista-fonts && yay ttf-tahoma` [Source](https://wiki.archlinux.org/index.php/Microsoft_fonts)
 * Audio : Pour envoyer le son de l’ordinateur sur un périphérique upnp-dlna (chrome-key ou freebox par exemple), la solution la plus simple me semble être `yay pulseaudio-dlna` (qu’il faudra lancer au démarrage de la session), **pavucontrol** permet ensuite d’aisément sélectionner la sortie audio.
 * `yay marktext` (plein de fonctionnalités sympa)
@@ -96,11 +97,7 @@ Quelques outils supplémentaires pour le boulot :
 * `yay alphaplot`
 * `sudo pacman -S octave`
   Et éventuellement :
-* [Tixeo (visio conférence boulot)](https://www.tixeo.com/) : `yay tixeo`
-* `yay zoom`
-* `yay teams microsoft`
 * Pour streamer : `sudo pacman -S obs-studio`
-* (pour le télétravail : `sudo pacman -S openvpn icedtea-web` mais ça ne fonctionne pas)
 
 <!--
 ███████╗███████╗██╗  ██╗
@@ -236,20 +233,14 @@ Je choisi la disposition Modern et dans les paramètres je coche l’option **De
 
 * `yay python2-gimp` et `yay gimp-plugin-resynthesizer` pour avoir **heal selection** (Filtre → Amélioration → Corriger la sélection)
 
-## Thunderbird
-
-* [Thunderbird Conversations](https://addons.thunderbird.net/fr/thunderbird/addon/gmail-conversation-view/)
-* [gContactSync](https://addons.thunderbird.net/fr/thunderbird/addon/gcontactsync/?src=userprofile)
-
 ## Firefox
 
-* [Cozy - Cloud personnel](https://addons.mozilla.org/fr/firefox/addon/cozy-personal-cloud/)
-* [Dark Reader](https://addons.mozilla.org/fr/firefox/addon/darkreader/)
-* [GSConnect](https://addons.mozilla.org/fr/firefox/addon/gsconnect/)
+* [Auto Tab Discard](https://webextension.org/listing/tab-discard.html)
+* [Ghostery](https://www.ghostery.com/)
 * [I don't care about cookies](https://addons.mozilla.org/fr/firefox/addon/i-dont-care-about-cookies/) est-ce que ça valide tout ???
-* [Simple Tab Groups](https://addons.mozilla.org/fr/firefox/addon/simple-tab-groups/)
-* [Tab Suspender](https://addons.mozilla.org/fr/firefox/addon/ff-tab-suspender/)
-* [Textarea Cache](https://addons.mozilla.org/fr/firefox/addon/textarea-cache/?src=search)
+* [Intégration à GNOME Shell](https://gnome.pages.gitlab.gnome.org/gnome-browser-integration/pages/gnome-browser-integration.html)
+* [GSConnect](https://addons.mozilla.org/fr/firefox/addon/gsconnect/)
+* [SponsorBlock pour YouTube](https://sponsor.ajay.app/)
 * [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/?src=search)
 
 ## Correcteur grammatical grammalecte
@@ -393,15 +384,8 @@ J'ai ajouté **manjaro-settings-samba** comme paquet pour résoudre un problème
 -->
 # Impression 3D
 
-## Ultimaker Cura
-
-`yay cura-bin`. Je le lance, au premier démarrage je peux me connecter à un compte Ultimaker. J’ajoute une imprimante non connectée en réseau, je sélectionne le profil de l'Alfawise u30 qui est identique à ma Longer LK4 pro.
-
-Par défaut Cura est en Anglais mais dans les Paramètres il est possible de sélectionner la langue de son choix.
-
-## STL
-
-Pour visualiser mes fichiers stl, il me semble que MeshLab soit la meilleure solution (`yay meshlab`). Pour créer les fichiers j’ai OpenSCAD ou FreeCAD (`yay freecad` dans lequel j’ajoute l’extension [Fasteners Workbench](https://wiki.freecad.org/Fasteners_Workbench) pour la gestion des vis et écrous)
+* `yay cura-bin`. Je le lance, au premier démarrage je peux me connecter à un compte Ultimaker. J’ajoute une imprimante non connectée en réseau, je sélectionne le profil de l'Alfawise u30 qui est identique à ma Longer LK4 pro. Par défaut Cura est en Anglais mais dans les Paramètres il est possible de sélectionner la langue de son choix.
+* `yay freecad-weekly-appimage` pour mon logiciel de CAO préféré. J’ajoute l’extension [Fasteners Workbench](https://wiki.freecad.org/Fasteners_Workbench) pour la gestion des vis et écrous (et le thème…, à ajouter)
 
 
 
@@ -582,6 +566,8 @@ Pour déchiffrer disques chiffré avec bitlocker : `yay dislocker`
 # Reste à voir :
 * aur dans pacman ?
 * parefeu ?
+* boxxy-terminal
+* gamemode et gamemodeshellextension
 * xorg-xkill ?
 * `yay losslesscut`
 * `yay magicavoxel` en attendant de trouver le libre qui me conviendra
